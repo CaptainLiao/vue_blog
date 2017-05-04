@@ -43,8 +43,8 @@
   .nav-list {
     position: relative;
     width: 100%;
-    height: 70px;
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
     a {
       display: inline-block;
       width: 100%;

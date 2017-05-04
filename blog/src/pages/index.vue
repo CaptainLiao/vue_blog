@@ -2,7 +2,26 @@
   <div class="main">
 
     <blog-banner></blog-banner>
-    <blog-hello></blog-hello>
+    <section class="fay-section">
+      <h1>THE NEWEST BLOG</h1>
+      <h2>Essential Links</h2>
+      <el-row type="flex" class="row-bg" justify="center">
+        <el-col :xs="8" :sm="8" :md="8" :lg="8" class="fay-section-item no-border">
+          <h3>推荐</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat incidunt itaque nobis odio velit. Ab at culpa dicta excepturi, facilis laudantium maiores mollitia, placeat quam quasi quos repellendus rerum sunt?</p>
+        </el-col>
+        <el-col :xs="8" :sm="8" :md="8" :lg="8" class="fay-section-item">
+          <h3>推荐</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eaque, esse facilis fuga odio perspiciatis possimus. Consequuntur cumque delectus doloremque dolores exercitationem explicabo modi mollitia quia quidem sed veniam, veritatis?</p>
+        </el-col>
+        <el-col :xs="8" :sm="8" :md="8" :lg="8" class="fay-section-item">
+          <h3>联系方式</h3>
+          <p>
+            为什么要提升web性能？ Web性能黄金准则：只有10%~20%的最终用户响应时间花在了下载html文档上，其余的80%~90%时间花在了下载页面组件上
+          </p>
+        </el-col>
+      </el-row>
+    </section>
   </div>
 </template>
 
@@ -18,3 +37,26 @@
       }
   }
 </script>
+
+<style scoped lang="less">
+  .fay-section {
+    padding: 40px 10px;
+    h1,h2,h3 {
+      font-weight: normal;
+    }
+    h3 {
+      color: #324057;
+
+    }
+  }
+
+  .fay-section-item {
+    border-left: 1px solid #EFF2F7;
+    margin-top: 40px;
+    padding: 10px 20px 0 20px;
+    text-align: left;
+  }
+  .no-border {
+    border: 0;
+  }
+</style>

@@ -14,7 +14,9 @@ Vue.config.productionTip = false;
 
 // 注册全局组件
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 Vue.component('blog-header', Header);
+Vue.component('blog-footer', Footer);
 
 
 

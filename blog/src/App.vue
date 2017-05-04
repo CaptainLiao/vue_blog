@@ -2,6 +2,7 @@
   <section id="fay-blog">
     <blog-header></blog-header>
     <router-view></router-view>
+    <blog-footer></blog-footer>
   </section>
 </template>
 
@@ -18,6 +19,9 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+    margin-bottom: 320px;
+    padding-bottom: 20px;
+    background-color: #fff;
   }
   a {
     color: #000000;
@@ -32,6 +36,9 @@ export default {
     display: block;
   }
 
+  p {
+    line-height: 2rem;
+  }
 </style>
 
 <script>
