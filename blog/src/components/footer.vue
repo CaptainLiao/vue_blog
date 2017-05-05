@@ -1,7 +1,7 @@
 <template>
   <footer id="footer">
     <el-row :gutter="1" type="flex" class="row-bg" justify="center">
-      <el-col :xs="7" :sm="5" :md="6" :lg="5">
+      <el-col :xs="8" :sm="5" :md="6" :lg="5">
         <h3>推荐</h3>
         <p><a>博客园-我的小树林</a></p>
         <p><a>Github-linkFly</a></p>
@@ -22,8 +22,8 @@
         <p>邮箱：262133</p>
       </el-col>
     </el-row>
-    <el-row :gutter="1" type="flex" class="row-bg" justify="center">
-      <el-col :xs="22" :sm="22" :md="22" :lg="22" class="footer-copyright">
+    <el-row :gutter="1" type="flex" class="row-bg footer-copyright" justify="center">
+      <el-col :xs="22" :sm="22" :md="22" :lg="22">
         ©2017 闷骚师兄 - CaptainLiao - <a href="#">152365号</a>
       </el-col>
     </el-row>
@@ -32,15 +32,20 @@
 </template>
 
 <style lang="less" scoped>
+  @import "../assets/less/global.less";
   #footer {
     position: fixed;
     bottom: 0;
     z-index: -1;
+
     width: 100%;
-    padding: 20px 6px;
+    padding: 20px 6px 20px;
     color: #fff;
     text-align: left;
     background: none repeat scroll 0 0 #292929;
+    h3 {
+      font-weight: normal;
+    }
     a {
       color: #fff;
       font-size: 14px;
@@ -50,7 +55,17 @@
       text-align: right;
       font-size: 12px;
       a:hover {
-        color: #20A0FF;
+        color: @hover-color;
+      }
+    }
+  }
+  @media screen and (max-width: @xs-width) {
+    #footer {
+
+      padding: 20px 0;
+      p {
+        font-size: 12px;
+        line-height: 1.2;
       }
     }
   }

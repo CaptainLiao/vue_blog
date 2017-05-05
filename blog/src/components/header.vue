@@ -34,6 +34,7 @@
 </script>
 
 <style lang="less" scoped>
+  @import "../assets/less/global.less";
   #header {
     padding: 10px 0 15px 0;
   }
@@ -49,13 +50,13 @@
       display: inline-block;
       width: 100%;
       &:hover {
-         color: #20A0FF;
+         color: @hover-color;
          border-bottom: 1px solid #58B7FF;
          animation: width;
        }
     }
     .nav-active {
-      color: #20A0FF;
+      color: @active-color;
       border-bottom: 1px solid #58B7FF;
     }
 

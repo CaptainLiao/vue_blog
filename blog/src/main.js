@@ -5,6 +5,7 @@ import App from '@/App'
 import router from '@/router'
 
 // 引入外部css
+import './assets/less/reset.less'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 

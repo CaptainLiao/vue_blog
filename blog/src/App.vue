@@ -12,32 +12,22 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less">
+  @import "./assets/less/global.less";
   #fay-blog {
     font-family: STHeiti,"Helvetica Neue",Helvetica,Arial,'Microsoft Yahei',sans-serif,'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    margin-bottom: 320px;
+    margin-bottom: 350px;
     padding-bottom: 20px;
     background-color: #fff;
   }
-  a {
-    color: #000000;
-    text-decoration: none;
-  }
-  ul, li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  img {
-    display: block;
-  }
 
-  p {
-    line-height: 2rem;
+  @media screen and (max-width: @xs-width) {
+    #fay-blog {
+      margin-bottom: 270px;
+    }
   }
 </style>
 

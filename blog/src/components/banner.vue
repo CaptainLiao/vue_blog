@@ -7,6 +7,7 @@
 </template>
 
 <style lang="less" scoped>
+  @import "../assets/less/global.less";
   .fay-banner {
     width: 100%;
     height: 700px;
@@ -22,5 +23,10 @@
   .banner-list {
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width: @xs-width) {
+    .fay-banner {
+      height: 300px;
+    }
   }
 </style>
