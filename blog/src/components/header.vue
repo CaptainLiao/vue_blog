@@ -9,9 +9,9 @@
       <el-row :gutter="20" type="flex" class="nav-list row-bg" justify="center">
         <el-col :xs="6" :sm="7" :md="7" :lg="7" class="nav-logo"><div>LOGO</div></el-col>
         <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/" class="nav-active">首页</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/">博客</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/">项目</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/">关于</a></el-col>
+        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/blog">博客</a></el-col>
+        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/project">项目</a></el-col>
+        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/about">关于</a></el-col>
         <span class="nav-hover"></span>
       </el-row>
     </nav>

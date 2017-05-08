@@ -1,9 +1,10 @@
 <template>
-  <section id="fay-blog">
+  <section id="fay">
     <blog-header></blog-header>
     <router-view></router-view>
     <blog-footer></blog-footer>
   </section>
+
 </template>
 
 <script>
@@ -14,7 +15,7 @@ export default {
 
 <style lang="less">
   @import "./assets/less/global.less";
-  #fay-blog {
+  #fay {
     font-family: STHeiti,"Helvetica Neue",Helvetica,Arial,'Microsoft Yahei',sans-serif,'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,16 +26,9 @@ export default {
   }
 
   @media screen and (max-width: @xs-width) {
-    #fay-blog {
-      margin-bottom: 270px;
+    #fay {
+      margin-bottom: 221px;
     }
   }
+
 </style>
-
-<script>
-  export default {
-      components: {
-
-      }
-  }
-</script>

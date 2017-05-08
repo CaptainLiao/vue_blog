@@ -8,6 +8,7 @@ import router from '@/router'
 import './assets/less/reset.less'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
+import './assets/less/main.less'
 
 Vue.use(ElementUI);
 
