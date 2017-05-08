@@ -2,17 +2,16 @@
 <template>
   <header id="header">
     <div class="logo">
-
       <a href="/" class="logo-link" title="廖大爷"></a>
     </div>
     <nav class="nav">
       <el-row :gutter="20" type="flex" class="nav-list row-bg" justify="center">
-        <el-col :xs="6" :sm="11" :md="7" :lg="7" class="nav-logo"><div>LOGO</div></el-col>
-        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/" class="nav-active">首页</a></el-col>
-        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/blog" :click="">博客</a></el-col>
-        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/project">项目</a></el-col>
-        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/about">关于</a></el-col>
-        <span class="nav-hover"></span>
+        <el-col :xs="6" :sm="11" :md="7" :lg="7"><div class="nav-logo" @click="switchTab('', '/')">LOGO</div></el-col>
+
+        <el-col :xs="4" :sm="2" :md="2" :lg="1" v-for="(item, index) in urls" :key="item.id">
+          <a href="javascript:;" @click="switchTab(index, item.url)" :data-i="index" :data-url="item.url" v-bind:class="{'nav-active': i == index}">{{item.message}}</a>
+        </el-col>
+
       </el-row>
     </nav>
 
@@ -24,8 +23,27 @@
   export default {
       data() {
           return {
-              data: []
+              urls: [
+                {url: '/', message: '首页'},
+                {url: '/blog', message: 'blog'},
+                {url: '/project', message: '项目'},
+                {url: '/about', message: '关于'},
+              ],
+              i: 0
           }
+      },
+      methods: {
+        switchTab(index, url) {
+            this.i = index;
+            this.$router.push({path: url})
+
+        },
+        printPath() {
+
+        }
+      },
+      watch: {
+          $route: 'printPath'
       },
       created() {
 
@@ -40,6 +58,8 @@
     font-size: 14px;
   }
   .nav-logo{
+    width: 80px;
+    cursor: pointer;
     text-align: left;
   }
   .nav-list {
@@ -47,7 +67,8 @@
     width: 100%;
     height: 60px;
     line-height: 60px;
-    a {
+    a,span {
+      cursor: pointer;
       display: inline-block;
       width: 100%;
       &:hover {

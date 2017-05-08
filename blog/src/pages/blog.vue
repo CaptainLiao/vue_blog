@@ -4,7 +4,7 @@
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :xs="24" :sm="20" :md="20" :lg="14" class="no-border fl">
         <section>
-          <h4 id="-">最初的渲染函数</h4>
+          <h2 id="-">最初的渲染函数</h2>
           <p>机智如我自然想到用函数来循环。。。</p>
           <pre><code><span class="hljs-keyword">var</span> render = function(<span class="hljs-keyword">data</span>) {
     <span class="hljs-keyword">var</span> tmp = <span class="hljs-string">''</span>;
@@ -17,7 +17,7 @@
     <span class="hljs-keyword">return</span> tmp;
 };
 </code></pre>
-          <h3 id="-b-function">牛B的Function</h3>
+          <h2 id="-b-function">牛B的Function</h2>
           <p>我们用的最多的就是 function 关键字了，但对于 function 的爸爸 Function 却有点陌生，那么 Function 究竟哪里流弊呢？红宝石书不是建议我们不要用 Function吗？
             其实，在JS中，但我们使用 function 声明函数的时候，JS会自动调用 Function 来生成实例。并且，Function 为我们提供了更强大的武器——动态函数。</p>
           <blockquote>
@@ -50,7 +50,7 @@
     }
     pre {
       overflow-x: auto;
-      padding: 0 10px;
+      padding: 10px;
       background-color: #f7f7f7;
     }
 
@@ -62,8 +62,7 @@
 
 
     h2 {
-      padding-bottom: .3em;
-      line-height: 1.225;
+      line-height: 2;
       border-bottom: 1px solid #eee;
     }
 
