@@ -7,11 +7,11 @@
     </div>
     <nav class="nav">
       <el-row :gutter="20" type="flex" class="nav-list row-bg" justify="center">
-        <el-col :xs="6" :sm="7" :md="7" :lg="7" class="nav-logo"><div>LOGO</div></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/" class="nav-active">首页</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/blog">博客</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/project">项目</a></el-col>
-        <el-col :xs="4" :sm="3" :md="2" :lg="1"><a href="/about">关于</a></el-col>
+        <el-col :xs="6" :sm="11" :md="7" :lg="7" class="nav-logo"><div>LOGO</div></el-col>
+        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/" class="nav-active">首页</a></el-col>
+        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/blog" :click="">博客</a></el-col>
+        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/project">项目</a></el-col>
+        <el-col :xs="4" :sm="2" :md="2" :lg="1"><a href="/about">关于</a></el-col>
         <span class="nav-hover"></span>
       </el-row>
     </nav>
@@ -37,6 +37,7 @@
   @import "../assets/less/global.less";
   #header {
     padding: 10px 0 15px 0;
+    font-size: 14px;
   }
   .nav-logo{
     text-align: left;
@@ -64,5 +65,11 @@
   .nav-hover {
     position: absolute;
 
+  }
+
+  @media screen and (max-width: @xs-width) {
+    #header {
+      font-size: 12px;
+    }
   }
 </style>
