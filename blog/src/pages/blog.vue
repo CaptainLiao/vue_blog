@@ -1,8 +1,13 @@
 <template>
 
   <div id="fay-blog">
+
+
     <el-row type="flex" class="row-bg" justify="center">
-      <el-col :xs="24" :sm="20" :md="20" :lg="14" class="no-border fl">
+      <el-col :xs="24" :sm="14" :md="14" :lg="14" class="main fl">
+
+        <blog-navbar></blog-navbar>
+
         <section>
           <h2 id="-">最初的渲染函数</h2>
           <p>机智如我自然想到用函数来循环。。。</p>
@@ -35,13 +40,26 @@
   </div>
 </template>
 
+<script>
+  export default {
+    components: {
+      'blog-navbar': require('../components/sidebar')
+    }
+  }
+</script>
+
 <style lang="less" scoped>
   @import "../assets/less/global.less";
   #fay-blog {
+    position: relative;
     text-align: left;
     padding: 0 10px;
+
+    .main {
+      position: relative;
+    }
     blockquote {
-      margin: 0 0 25px 0;
+      margin: 10px 0 25px 0;
       padding: 20px;
       font-weight: 400;
       word-break: break-all;

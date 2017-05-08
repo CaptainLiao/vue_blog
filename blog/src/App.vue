@@ -9,7 +9,9 @@
 
 <script>
 export default {
-  name: 'app'
+  created() {
+    this.$router.push('/')
+  }
 }
 </script>
 

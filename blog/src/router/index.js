@@ -4,6 +4,8 @@ import Router from 'vue-router'
 // 视图页面
 import Index from '@/pages/index'
 import Blog from '@/pages/blog'
+import Project from '@/pages/project'
+import About from '@/pages/about'
 
 
 Vue.use(Router);
@@ -20,9 +22,20 @@ let blog = {
   component: Blog
 };
 
+let project = {
+  path: '/project',
+  name: 'Project',
+  component: Project
+};
+
+let about = {
+  path: '/about',
+  name: 'About',
+  component: About
+};
 
 export default new Router({
   mode: 'history',
   base: __dirname,
-  routes: [index, blog]
+  routes: [index, blog, project, about]
 })

@@ -61,15 +61,6 @@
 
 <style lang="less">
   @import "../assets/less/global.less";
-  #fay-index {
-    font-family: STHeiti,"Helvetica Neue",Helvetica,Arial,'Microsoft Yahei',sans-serif,'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    margin-bottom: 350px;
-    padding-bottom: 20px;
-    background-color: #fff;
-  }
 
   .fay-section-item {
     border-left: 1px solid #EFF2F7;
