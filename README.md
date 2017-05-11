@@ -12,8 +12,16 @@
 前端项目启动：
 
 1.  git clone https://github.com/CaptainLiao/vue_blog.git
-2.  npm install
-3.  npm run dev
-4.  在浏览器地址栏键入：http://localhost:8080
+2.  cd blog
+3.  npm install
+4.  npm run dev
+5.  在浏览器地址栏键入：http://localhost:8080
 
 ## 后端实现：node + express + mongoDB
+
+后台项目启动：
+1.  git clone https://github.com/CaptainLiao/vue_blog.git
+2.  cd blog_end
+3.  npm install
+4.  set DEBUG=blog_end & npm start
+5.  在浏览器地址栏键入：http://localhost:5000
