@@ -6,4 +6,5 @@ router.get('/', function(req, res, next) {
   res.render('index.art', { title: '廖大爷s' });
 });
 
+
 module.exports = router;
