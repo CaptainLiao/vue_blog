@@ -1,8 +1,31 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
 }
 
-a {
-  color: #00B7FF;
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.sidebar {
+  position: absolute;
+  z-index: 99;
+}
+.main {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 60px 0 0 200px;
 }

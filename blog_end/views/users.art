@@ -2,7 +2,7 @@
 <% extend('./layout.art')%>
 
 <% block('title', function() {%>
-    {{title}}
+{{title}}
 <%})%>
 
 <% block('head', function() {%>

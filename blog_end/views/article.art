@@ -1,0 +1,23 @@
+<% extend('./layout.art')%>
+
+<% block('title', function() {%>
+    {{title}}
+<%})%>
+
+<% block('head', function() {%>
+
+<%})%>
+
+<% block('content', function() {%>
+<textarea id="demo" style="display: none;"></textarea>
+
+<%})%>
+
+<% block('scripts', function() {%>
+<script>
+    layui.use('layedit', function(){
+        let layedit = layui.layedit;
+        layedit.build('demo'); //建立编辑器
+    });
+</script>
+<%})%>

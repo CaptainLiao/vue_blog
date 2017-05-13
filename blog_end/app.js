@@ -13,11 +13,6 @@ let users = require('./routes/users');
 let app = express();
 
 // 使用art-template
-// template.config('base', '');
-// template.config('extname', '.art');
-// app.engine('.art', template.__express);
-// app.set('view engine', 'art');
-
 app.engine('art', require('express-art-template'));
 app.set('view options', {
     debug: process.env.NODE_ENV !== 'production'
@@ -35,6 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/article', require('./routes/article'));
 app.use('/users', users);
 
 
