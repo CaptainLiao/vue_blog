@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index.art', { title: 'liao大爷' });
+  res.render('index.art', { title: '廖大爷s' });
 });
 
 module.exports = router;

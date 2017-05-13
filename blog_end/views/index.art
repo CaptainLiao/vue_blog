@@ -1,12 +1,25 @@
-{{extend './layout.art'}}
 
-{{block 'title'}}{{title}}{{/block}}
+<% extend('./layout.art')%>
 
-{{block 'head'}}
+<% block('title', function() {%>
+    {{title}}
+<%})%>
 
-{{/block}}
+<% block('head', function() {%>
 
-{{block 'content'}}
-<p>Tsdfhis is just an awesome page.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur iste nemo similique voluptate? Ad alias architecto deleniti distinctio explicabo, ipsam itaque iure laboriosam laborum quae quibusdam, rerum similique totam.</p>
-{{/block}}
+<%})%>
+
+<% block('content', function() {%>
+    <p>Tsdfhdfis is just an awesome page.</p>
+    <div class="sdf">
+
+            </div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad consequuntur iste nemo similique voluptate? Ad alias arc
+    hitecto deleniti distinctio explicabo, ipsam itaque iure laboriosam labo
+    rum quae quibusdam, rerum similique totam.
+    </p>
+<%})%>
+
+
