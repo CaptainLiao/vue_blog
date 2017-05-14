@@ -10,3 +10,7 @@ table td {
 	display: inline-block;
 	width: 26%;
 }
+
+.layui-layedit {
+  width: 80%;
+}

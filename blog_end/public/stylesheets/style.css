@@ -5,7 +5,7 @@
   float: left;
 }
 .fr {
-  float: right;
+    float: right;
 }
 
 .clearfix:after,
@@ -18,8 +18,12 @@
 }
 
 .sidebar {
-  position: absolute;
+  height: 100%;
+  position: fixed;
   z-index: 99;
+}
+.sidebar ul {
+    height: inherit;
 }
 .main {
   width: 100%;

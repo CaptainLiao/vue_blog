@@ -1,5 +1,5 @@
 
-<% extend('./layout.art')%>
+<% extend('./components/layout.art')%>
 
 <% block('title', function() {%>
 {{title}}

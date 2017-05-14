@@ -1,22 +1,31 @@
-<% extend('./layout.art')%>
+<% extend('./components/layout.art')%>
 
 <% block('title', function() {%>
     {{title}}
 <%})%>
 
 <% block('head', function() {%>
-
+    <link rel="stylesheet" href="stylesheets/article.css">
 <%})%>
 
 <% block('content', function() {%>
 <textarea id="demo" style="display: none;"></textarea>
+<button class="layui-btn layui-btn-normal save-btn">保存</button>
 
 <%})%>
 
+
 <% block('scripts', function() {%>
 <script>
+
     layui.use('layedit', function(){
         let layedit = layui.layedit;
+        layedit.set({
+            uploadImage: {
+                url: 'http://opo2yekqx.bkt.clouddn.com', //接口url
+                type: '' //默认post
+            }
+        });
         layedit.build('demo'); //建立编辑器
     });
 </script>
