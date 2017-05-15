@@ -22,7 +22,7 @@
         let layedit = layui.layedit;
         layedit.set({
             uploadImage: {
-                url: 'http://opo2yekqx.bkt.clouddn.com', //接口url
+                url: '', //接口url
                 type: '' //默认post
             }
         });
