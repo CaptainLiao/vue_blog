@@ -9,7 +9,7 @@
 
 let qn = require('qn');
 let path = require('path');
-let filePath = './public/images/33.jpg';
+let filePaths = ['public/images/33.jpg', 'public/images/1.jpg'];
 
 let client = qn.create({
     accessKey: 'ZfEZGc8IWw_WvLNYa8-J6LCHRifl8Y0Tmz1FOyg3',
@@ -31,16 +31,6 @@ let qiniuUpload = (filePaths) => {
                 }else {
                     resolve(result);
                 }
-                // {
-                //   hash: 'FhGbwBlFASLrZp2d16Am2bP5A9Ut',
-                //   key: 'qn/lib/client.js',
-                //   url: 'http://qtestbucket.qiniudn.com/qn/lib/client.js'
-                //   "x:ctime": "1378150371",
-                //   "x:filename": "client.js",
-                //   "x:mtime": "1378150359",
-                //   "x:size": "21944",
-                // }
-
             });
         });
     });
@@ -49,6 +39,8 @@ let qiniuUpload = (filePaths) => {
 
 };
 
+exports.qiniuUpload = qiniuUpload;
 
-qiniuUpload(['./public/images/33.jpg', './public/images/1.jpg']).then(res => console.log(res));
+//let m = qiniuUpload(filePaths).then(res => console.log(res));
+
 

@@ -12,6 +12,11 @@
 <textarea id="demo" style="display: none;"></textarea>
 <button class="layui-btn layui-btn-normal save-btn">保存</button>
 
+<form action="/uploadImg" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" accept="image/png,image/gif,image/jpg">
+    <button type="submit">提交</button>
+</form>
+
 <%})%>
 
 
@@ -22,8 +27,8 @@
         let layedit = layui.layedit;
         layedit.set({
             uploadImage: {
-                url: '', //接口url
-                type: '' //默认post
+                url: '/uploadImg', //接口url
+                type: 'POST' //默认post
             }
         });
         layedit.build('demo'); //建立编辑器

@@ -6,9 +6,7 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let artTemplate = require('express-art-template');
 let template = require('art-template');
-
-let index = require('./routes/index');
-let users = require('./routes/users');
+let multer = require('multer');
 
 let app = express();
 
@@ -25,12 +23,27 @@ app.set('views', path.join(__dirname, 'views'));
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//app.use(multer())
+
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,params");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    next();
+});
+
+let index = require('./routes/index');
+let users = require('./routes/users');
+
 app.use('/', index);
 app.use('/article', require('./routes/article'));
+app.use('/uploadImg', require('./routes/uploadImg'));
 app.use('/users', users);
 
 
@@ -52,4 +65,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 module.exports = app;
+
+
