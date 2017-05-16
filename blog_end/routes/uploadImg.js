@@ -15,11 +15,22 @@ router.post('/',upload.single('file'), function(req, res, next) {
     let oldFile = file.path;
     let newPath = oldFile.split(file.filename)[0] + file.originalname;
 
-    console.log(newPath)
     fs.renameSync(file.path, newPath);
-    console.log(qiniuUpload);
+
     qiniuUpload.qiniuUpload([newPath]).then(result => {
-        res.send(JSON.stringify(result));
+        fs.unlink(newPath, (err)=> {
+            console.log(err);
+        });
+        let host = 'http://opz2g8x56.bkt.clouddn.com/';
+        let _result = {
+            code: 0,
+            'msg': 'ok',
+            data: {
+                src: host + result[0].key,
+                title: result[0].key
+            }
+        };
+        res.send(_result);
     });
 });
 

@@ -5,7 +5,9 @@
 <%})%>
 
 <% block('head', function() {%>
-    <link rel="stylesheet" href="stylesheets/article.css">
+<link rel="stylesheet" href="simplemde/simplemde.min.css"></link>
+<link rel="stylesheet" href="stylesheets/article.css">
+
 <%})%>
 
 <% block('content', function() {%>
@@ -21,17 +23,22 @@
 
 
 <% block('scripts', function() {%>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="simplemde/simplemde.min.js"></script>
 <script>
-
-    layui.use('layedit', function(){
-        let layedit = layui.layedit;
-        layedit.set({
-            uploadImage: {
-                url: '/uploadImg', //接口url
-                type: 'POST' //默认post
-            }
-        });
-        layedit.build('demo'); //建立编辑器
-    });
+    let simplemde = new SimpleMDE();
 </script>
+<!--<script>-->
+
+    <!--layui.use('layedit', function(){-->
+        <!--let layedit = layui.layedit;-->
+        <!--layedit.set({-->
+            <!--uploadImage: {-->
+                <!--url: '/uploadImg', //接口url-->
+                <!--type: 'POST' //默认post-->
+            <!--}-->
+        <!--});-->
+        <!--layedit.build('demo'); //建立编辑器-->
+    <!--});-->
+<!--</script>-->
 <%})%>
