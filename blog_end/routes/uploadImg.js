@@ -4,7 +4,7 @@ let multer = require("multer");
 let target = './public/images';
 let upload = multer({dest: target});
 let fs = require('fs');
-let qiniuUpload = require('../qiniuUpload')
+let qiniuUpload = require('../qiniuUpload');
 
 /**
  * 图片上传接口
@@ -30,9 +30,8 @@ router.post('/',upload.single('file'), function(req, res, next) {
                 title: result[0].key
             }
         };
-        res.send(_result);
+        res.send(JSON.stringify(_result));
     });
 });
-
 
 module.exports = router;
