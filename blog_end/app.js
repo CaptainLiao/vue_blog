@@ -10,6 +10,17 @@ let multer = require('multer');
 
 let app = express();
 
+let mongoose = require('mongoose');
+const DB_URL = 'mongodb://localhost/vueBlog'
+
+// 连接数据库
+mongoose.connect(DB_URL);
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+    console.log('db service connected.')
+});
+
 // 使用art-template
 app.engine('art', require('express-art-template'));
 app.set('view options', {
