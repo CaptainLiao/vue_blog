@@ -3,7 +3,8 @@ let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index.art', { title: '廖大爷s' });
+  res.redirect('/article/list')
+  //res.render('index.art', { title: '廖大爷s' });
 });
 
 

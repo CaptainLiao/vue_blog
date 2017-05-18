@@ -1,14 +1,12 @@
-
+.wrapper {
+	width: 80%;
+}
 table td,
 table th {
 	text-align: center;
 }
 table td {
 	cursor: pointer;
-}
-.table-operation-box i {
-	display: inline-block;
-	width: 26%;
 }
 
 .layui-layedit {

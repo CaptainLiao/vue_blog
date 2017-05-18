@@ -9,6 +9,7 @@ let template = require('art-template');
 let multer = require('multer');
 
 let app = express();
+app.locals.moment = require('moment');
 
 let mongoose = require('mongoose');
 const DB_URL = 'mongodb://localhost/vueBlog'

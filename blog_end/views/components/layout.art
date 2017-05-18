@@ -42,7 +42,7 @@
         <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;">文章管理</a>
             <dl class="layui-nav-child">
-                <dd><a href="javascript:;">文章分类</a></dd>
+                <dd><a href="/article">文章创建</a></dd>
                 <dd><a href="/article/list">文章列表</a></dd>
                 <dd><a href="">跳转项</a></dd>
             </dl>

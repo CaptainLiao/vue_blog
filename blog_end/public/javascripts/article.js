@@ -56,12 +56,14 @@
     $('.save-btn').click(function () {
         let content = $('.CodeMirror').text();
         let title = $('.article-title').val();
+        var type = $('.operate-btn').find('.layui-btn-warm').text();
         $.ajax({
             url: '/article/new',
             method: 'POST',
             dataType: 'json',
             data: {
                 title: title,
+                type: type,
                 content: content
             },
             success: function(res) {
@@ -77,5 +79,13 @@
                 console.log(err);
             }
         })
-    })
+    });
+
+    $('.operate-btn').on('click', 'button', function() {
+       var $this = $(this);
+       $this.addClass('layui-btn-warm')
+               .siblings().removeClass('layui-btn-warm');
+
+       console.log($this);
+    });
 })();

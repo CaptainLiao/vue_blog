@@ -9,11 +9,15 @@ let someMiddleware = (req, res, next) => {
 };
 
 let edit = (req, res, next) => {
-    res.render('article.art', { title: '廖大爷s' });
+    res.render('article.art', { title: '新建文章' });
 };
 
 let list = (req, res, next) => {
-    res.render('article.art', { title: '廖s' });
+    Article.fetch((err, data) => {
+        if(err) throw new Error(err);
+
+        res.render('articleList.art', { title: '文章列表', articles: data } );
+    })
 };
 
 let create = (req, res, next) => {
@@ -23,7 +27,8 @@ let create = (req, res, next) => {
 
     newArticle = new Article({
         content: articleObj.content,
-        title: articleObj.title
+        title: articleObj.title,
+        type: articleObj.type
     });
     newArticle.save((err, article) => {
         if(err) {
@@ -31,14 +36,15 @@ let create = (req, res, next) => {
         }else {
             res.send({code: 0, msg: 'success', article});
         }
-
     });
+
 };
+
 // 文章编辑主页
 router.get('/', someMiddleware, edit);
 
 // 文章列表
-router.get('/list', edit);
+router.get('/list', list);
 
 // 文章新增
 router.post('/new', create);
