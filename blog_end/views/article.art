@@ -5,34 +5,38 @@
 <%})%>
 
 <% block('head', function() {%>
-<link rel="stylesheet" href="simplemde/simplemde.min.css"></link>
-<link rel="stylesheet" href="stylesheets/article.css">
+<link rel="stylesheet" href="/simplemde/simplemde.min.css"></link>
+<link rel="stylesheet" href="/stylesheets/article.css">
 
 <%})%>
 
 <% block('content', function() {%>
 
-<form action="" id="uploadForm" enctype="multipart/form-data" style="display: none">
-    <input type="file" id="chooseFile" name="file" accept="image/png,image/gif,image/jpg">
-    <button type="button" id="submitBtn">提交</button>
-</form>
+<div class="article">
+    <form action="" id="uploadForm" enctype="multipart/form-data" style="display: none">
+        <input type="file" id="chooseFile" name="file" accept="image/png,image/gif,image/jpg">
+        <button type="button" id="submitBtn">提交</button>
+    </form>
+    <h2>标题：</h2>
+    <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input article-title">
+    <h2>内容：</h2>
+    <input type="text" id="inputText" placeholder="选择图片后点击右侧按钮复制地址" autocomplete="off" class="layui-input img-url-input"/>
+    <input type="button" class="layui-btn layui-btn-normal" id="btn" value="复制"/>
 
-<input type="text" id="inputText" placeholder="选择图片后点击右侧按钮复制地址" autocomplete="off" class="layui-input img-url-input"/>
-<input type="button" class="layui-btn layui-btn-normal" id="btn" value="复制"/>
-
-<div class="edit-area">
-    <textarea rows="4"></textarea>
+    <div class="edit-area">
+        <textarea rows="4"></textarea>
+    </div>
+    <button class="layui-btn layui-btn-normal save-btn">保存</button>
 </div>
-<button class="layui-btn layui-btn-normal save-btn">保存</button>
 <%})%>
 
 
 <% block('scripts', function() {%>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="simplemde/simplemde.min.js"></script>
+<script src="/simplemde/simplemde.min.js"></script>
 
 <script>
     let simplemde = new SimpleMDE();
 </script>
-<script src="javascripts/article.js"></script>
+<script src="/javascripts/article.js"></script>
 <%})%>

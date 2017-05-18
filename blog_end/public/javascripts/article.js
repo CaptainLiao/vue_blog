@@ -54,17 +54,24 @@
     });
 
     $('.save-btn').click(function () {
-        let val = $('.CodeMirror').text();
-        console.log(val)
+        let content = $('.CodeMirror').text();
+        let title = $('.article-title').val();
         $.ajax({
             url: '/article/new',
             method: 'POST',
             dataType: 'json',
             data: {
-                data: val
+                title: title,
+                content: content
             },
             success: function(res) {
-                console.log(res);
+                if(res.code === 0) {
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+
+                        layer.msg(res.msg);
+                    });
+                }
             },
             error: function(err) {
                 console.log(err);

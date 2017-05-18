@@ -1,16 +1,22 @@
-.edit-area {
+.article {
+    margin-top: 10px;
+    margin-left: 10px;
     width: 80%;
+}
+.edit-area {
     margin-top: 10px;
 }
 
 .save-btn {
     float: right;
-    margin-right: 20%;
     margin-top: 10px;
 }
 
 .img-url-input {
-    margin-top: 10px;
     width: 40%;
     display: inline-block;
+}
+
+h2 {
+    margin-top: 30px;
 }

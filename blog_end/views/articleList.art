@@ -1,0 +1,19 @@
+<% extend('./layout.art')%>
+
+<% block('title', function() {%>
+    {{title}}
+<%})%>
+
+<% block('head', function() {%>
+<link rel="stylesheet" href="stylesheets/">
+<%})%>
+
+<% block('content', function() {%>
+    <h2>文章列表</h2>
+<%})%>
+
+<% block('scripts', function() {%>
+    <script>
+    
+    </script>
+<%})%>

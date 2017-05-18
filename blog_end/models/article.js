@@ -4,6 +4,7 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let ArticleSchema = new Schema({
+    title: String,
     content: String,
     meta: {
         createAt: {
@@ -17,12 +18,14 @@ let ArticleSchema = new Schema({
     }
 });
 
-ArticleSchema.pre('save', (next) => {
-    // if(this.isNew) {
-    //     this.meta.update = this.meta.createAt = Date.now();
-    // }else {
-    //     this.meta.update = Date.now();
-    // }
+
+ArticleSchema.pre('save', function(next) {
+    if (this.isNew) {
+        this.meta.updateAt = this.meta.createAt = Date.now();
+    } else {
+        this.meta.updateAt = Date.now();
+    }
+
     next();
 });
 
