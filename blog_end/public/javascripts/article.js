@@ -1,12 +1,15 @@
-
-$('.fa-picture-o').click(function () {
+var btn = document.getElementById('btn');
+$('.fa-picture-o').off().on('click', function () {
     let title = $(this).attr('title');
+
     if(title.indexOf('Insert') >= 0) {
+        document.getElementById('chooseFile').files = null;
         $('#chooseFile')
                 .trigger('click')
-                .on('change', function () {
-                    console.log(1);
-                    let form = new FormData($('#uploadForm')[0]);
+                .off().on('change', function () {
+                    let form = null;
+                    form = new FormData($('#uploadForm')[0]);
+                    console.log(form);
                     $.ajax({
                         url: '/uploadImg',
                         method: 'POST',
@@ -17,19 +20,10 @@ $('.fa-picture-o').click(function () {
                         success: function (data) {
 
                             var url = data.data.src.split('//')[1];
-                            // $('#imgUrl').val(url).select()
-                            // js = $('#imgUrl').createTextRange();
-                            // js.execCommand("Copy");
+                            var inputText = document.getElementById('inputText');
 
-
-
-                            var inputText = document.getElementById('imgUrl');
-                            var currentFocus = document.activeElement;
-                            inputText.focus();
                             inputText.value = url;
-                            inputText.setSelectionRange(0, inputText.value.length);
-                            document.execCommand('copy', true);
-                            currentFocus.focus();
+                            // btn.click();
 
                             console.log($('.CodeMirror-code'))
                         },
@@ -43,6 +37,15 @@ $('.fa-picture-o').click(function () {
 });
 
 
+btn.addEventListener('click', function(){
+    var inputText = document.getElementById('inputText');
+    var currentFocus = document.activeElement;
+    inputText.focus();
+    inputText.setSelectionRange(0, inputText.value.length);
+    document.execCommand('copy', true);
+    currentFocus.focus();
+    inputText.value = '';
+});
 
 $('.save-btn').click(function () {
     console.log($('.CodeMirror').text())

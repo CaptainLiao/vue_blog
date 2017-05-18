@@ -1,4 +1,4 @@
-.layui-layedit {
+.edit-area {
     width: 80%;
     margin-top: 10px;
 }
@@ -9,3 +9,8 @@
     margin-top: 10px;
 }
 
+.img-url-input {
+    margin-top: 10px;
+    width: 40%;
+    display: inline-block;
+}
