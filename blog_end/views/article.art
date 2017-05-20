@@ -18,7 +18,7 @@
         <button type="button" id="submitBtn">提交</button>
     </form>
     <h2>标题：</h2>
-    <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input article-title">
+    <input type="text" name="title" placeholder="请输入标题" value="<%= article.title%>" autocomplete="off" class="layui-input article-title">
     <h2>标签：</h2>
     <div class="operate-btn">
         <button class="layui-btn layui-btn-small">JAVASCRIPT</button>
@@ -31,7 +31,7 @@
     <input type="button" class="layui-btn" id="btn" value="复制"/>
 
     <div class="edit-area">
-        <textarea rows="4"></textarea>
+        <textarea rows="4" value="<%= article.content%>"></textarea>
     </div>
     <button class="layui-btn save-btn">保存</button>
 </div>
@@ -39,7 +39,6 @@
 
 
 <% block('scripts', function() {%>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="/simplemde/simplemde.min.js"></script>
 
 <script>

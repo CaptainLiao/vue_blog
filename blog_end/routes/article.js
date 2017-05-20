@@ -9,7 +9,21 @@ let someMiddleware = (req, res, next) => {
 };
 
 let edit = (req, res, next) => {
-    res.render('article.art', { title: '新建文章' });
+    console.log(req.query.id);
+    let query = req.query;
+    if(query && query.id) {
+        let id = query.id.split('"')[1] || query.id;
+        console.log(id)
+        Article.findById(id, (err, data) => {
+            if(err) throw new Error(err);
+
+            res.render('article.art', { title: '修改文章', article: data });
+        });
+
+    } else {
+        res.render('article.art', { title: '新建文章' });
+    }
+
 };
 
 let list = (req, res, next) => {

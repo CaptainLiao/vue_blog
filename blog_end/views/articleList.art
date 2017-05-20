@@ -32,11 +32,11 @@
             <td><%= moment(item.meta.createAt).format('MM/DD/YY')%></td>
             <td><%= item.type%></td>
 
-            <td class="table-operation-box">
+            <td class="table-operation-box" id="<%= item._id%>">
                 <button class="layui-btn layui-btn-small">
                     <i class="layui-icon">&#xe654;</i>
                 </button>
-                <button class="layui-btn layui-btn-small layui-btn-danger" id="<%= item._id%>">
+                <button class="layui-btn layui-btn-small layui-btn-danger edit-btn">
                     <i class="layui-icon">&#xe642;</i>
                 </button>
                 <button class="layui-btn layui-btn-small">
@@ -57,6 +57,22 @@
 
 <% block('scripts', function() {%>
 <script>
+    $(function() {
+        $('.layui-table').on('click', 'button', function() {
+            var $thisClasses = $(this).attr('class').split(' ');
+            var $this = $thisClasses[$thisClasses.length - 1].trim();
+            var id = decodeURIComponent($(this).parent().attr('id'));
+
+            switch ($this) {
+                case 'edit-btn':
+                    location.href = '/article?id=' + id;
+            }
+
+        })
+    })
+
+</script>
+<script>
     layui.use(['laypage', 'layer'], function() {
         let laypage = layui.laypage
                 , layer = layui.layer;
@@ -67,46 +83,6 @@
             , groups: 5 //连续显示分页数
         });
         //测试数据
-
-        /*let data = [
-            '北京',
-            '上海',
-            '广州',
-            '深圳',
-            '杭州',
-            '长沙',
-            '合肥',
-            '宁夏',
-            '成都',
-            '西安',
-            '南昌',
-            '上饶',
-            '沈阳',
-            '济南',
-            '厦门',
-            '福州',
-            '九江',
-            '宜春',
-            '赣州',
-            '宁波',
-            '绍兴',
-            '无锡',
-            '苏州',
-            '徐州',
-            '东莞',
-            '佛山',
-            '中山',
-            '成都',
-            '武汉',
-            '青岛',
-            '天津',
-            '重庆',
-            '南京',
-            '九江',
-            '香港',
-            '澳门',
-            '台北'
-        ];*/
 
         let nums = 5; //每页出现的数据量
 
