@@ -33,13 +33,13 @@
             <td><%= item.type%></td>
 
             <td class="table-operation-box" id="<%= item._id%>">
-                <button class="layui-btn layui-btn-small">
-                    <i class="layui-icon">&#xe654;</i>
+                <button class="layui-btn layui-btn-small edit-preview">
+                    <i class="layui-icon">&#xe60b;</i>
                 </button>
                 <button class="layui-btn layui-btn-small layui-btn-danger edit-btn">
                     <i class="layui-icon">&#xe642;</i>
                 </button>
-                <button class="layui-btn layui-btn-small">
+                <button class="layui-btn layui-btn-small edit-del">
                     <i class="layui-icon">&#xe640;</i>
                 </button>
             </td>
@@ -62,10 +62,45 @@
             var $thisClasses = $(this).attr('class').split(' ');
             var $this = $thisClasses[$thisClasses.length - 1].trim();
             var id = decodeURIComponent($(this).parent().attr('id'));
-
+            var del = function() {
+                $.ajax({
+                    url: '/article/del',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        id: id
+                    },
+                    success: function(res) {
+                        console.log(res);
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+            };
             switch ($this) {
+                case 'edit-preview':
+                    location.href = '/article?id=' + id;
+                    break;
                 case 'edit-btn':
                     location.href = '/article?id=' + id;
+                    break;
+                case 'edit-del':
+                    $.ajax({
+                        url: '/article/del',
+                        method: 'POST',
+                        dataType: 'json',
+                        data: {
+                            id: id
+                        },
+                        success: function(res) {
+                            console.log(res);
+                        },
+                        error: function (err) {
+                            console.log(err)
+                        }
+                    })
+                    break;
             }
 
         })

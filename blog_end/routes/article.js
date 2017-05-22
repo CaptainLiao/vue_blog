@@ -12,8 +12,8 @@ let edit = (req, res, next) => {
     console.log(req.query.id);
     let query = req.query;
     if(query && query.id) {
-        let id = query.id.split('"')[1] || query.id;
-        console.log(id)
+        let id = query.id.replace(/\"/g, '');
+        console.log('id',id)
         Article.findById(id, (err, data) => {
             if(err) throw new Error(err);
 
@@ -21,7 +21,7 @@ let edit = (req, res, next) => {
         });
 
     } else {
-        res.render('article.art', { title: '新建文章' });
+        res.render('article.art', { title: '新建文章', article: {} });
     }
 
 };
@@ -36,21 +36,48 @@ let list = (req, res, next) => {
 
 let create = (req, res, next) => {
     let articleObj = req.body;
-    let id = articleObj._id;
+    let id = articleObj.id;
     let newArticle = {};
 
-    newArticle = new Article({
-        content: articleObj.content,
-        title: articleObj.title,
-        type: articleObj.type
-    });
-    newArticle.save((err, article) => {
+    if(id) {
+        id = id.replace(/\"/g, '');
+        console.log(id);
+        Article.updateById(id, articleObj, (err, result) => {
+            if(err) {
+                res.send({code: -1,msg: 'error',err})
+            }else {
+                res.send({code: 0, msg: 'success', result});
+            }
+        })
+    }else {
+        newArticle = new Article({
+            content: articleObj.content,
+            title: articleObj.title,
+            type: articleObj.type
+        });
+        newArticle.save((err, result) => {
+            if(err) {
+                res.send({code: -1,msg: 'error',err})
+            }else {
+                res.send({code: 0, msg: 'success', result});
+            }
+        });
+    }
+
+
+
+};
+
+let del = (req, res, next) => {
+    let id = req.body.id.replace(/\"/g, '');
+
+    Article.delById(id, (err, article) => {
         if(err) {
             res.send({code: -1,msg: 'error',err})
         }else {
             res.send({code: 0, msg: 'success', article});
         }
-    });
+    })
 
 };
 
@@ -62,5 +89,8 @@ router.get('/list', list);
 
 // 文章新增
 router.post('/new', create);
+
+// 删除文章
+router.post('/del', del);
 
 module.exports = router;

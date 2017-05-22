@@ -3,37 +3,35 @@
     $('.fa-picture-o').off().on('click', function () {
         let title = $(this).attr('title');
 
-        if(title.indexOf('Insert') >= 0) {
-            document.getElementById('chooseFile').files = null;
-            $('#chooseFile')
-                    .trigger('click')
-                    .off().on('change', function () {
-                let form = null;
-                form = new FormData($('#uploadForm')[0]);
-                console.log(form);
-                $.ajax({
-                    url: '/uploadImg',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: form,
-                    processData: false,
-                    contentType: false,
-                    success: function (data) {
+        document.getElementById('chooseFile').files = null;
+        $('#chooseFile')
+                .trigger('click')
+                .off().on('change', function () {
+            let form = null;
+            form = new FormData($('#uploadForm')[0]);
+            console.log(form);
+            $.ajax({
+                url: '/uploadImg',
+                method: 'POST',
+                dataType: 'json',
+                data: form,
+                processData: false,
+                contentType: false,
+                success: function (data) {
 
-                        var url = data.data.src.split('//')[1];
-                        var inputText = document.getElementById('inputText');
+                    var url = data.data.src.split('//')[1];
+                    var inputText = document.getElementById('inputText');
 
-                        inputText.value = url;
-                        // btn.click();
+                    inputText.value = url;
+                    // btn.click();
 
-                        console.log($('.CodeMirror-code'))
-                    },
-                    error: function(e) {
-                        console.log(e);
-                    }
-                })
+                    console.log($('.CodeMirror-code'))
+                },
+                error: function(e) {
+                    console.log(e);
+                }
             })
-        }
+        })
         return false;
     });
 
@@ -54,9 +52,10 @@
     });
 
     $('.save-btn').click(function () {
-        let content = $('.CodeMirror').text();
+        let content = $('#editContent').val();
         let title = $('.article-title').val();
         var type = $('.operate-btn').find('.layui-btn-warm').text();
+        var id = $(this).data('id');
         $.ajax({
             url: '/article/new',
             method: 'POST',
@@ -64,19 +63,28 @@
             data: {
                 title: title,
                 type: type,
-                content: content
+                content: content,
+                id: id
             },
             success: function(res) {
                 if(res.code === 0) {
-                    layui.use('layer', function(){
-                        var layer = layui.layer;
+                    setTimeout(function () {
+                        location.href = '/article/list';
+                    }, 1500)
 
-                        layer.msg(res.msg);
-                    });
                 }
             },
             error: function(err) {
                 console.log(err);
+            },
+            complete: function (res) {
+                console.log(res.responseJSON)
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+
+                    layer.msg(res.responseJSON.msg);
+
+                });
             }
         })
     });

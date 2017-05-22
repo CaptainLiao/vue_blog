@@ -40,6 +40,19 @@ ArticleSchema.statics = {
         return this
                 .findOne({_id: id})
                 .exec(cb)
+    },
+    delById(id, cb) {
+        return this.remove({_id: id})
+                .exec(cb);
+    },
+    updateById(id, newData, cb) {
+        let _this = this;
+        return _this.findById(id, (err, oldData) => {
+            if(err) throw new Error(err);
+
+            _this.update(oldData, newData)
+                    .exec(cb);
+        })
     }
 };
 

@@ -21,28 +21,29 @@
     <input type="text" name="title" placeholder="请输入标题" value="<%= article.title%>" autocomplete="off" class="layui-input article-title">
     <h2>标签：</h2>
     <div class="operate-btn">
-        <button class="layui-btn layui-btn-small">JAVASCRIPT</button>
-        <button class="layui-btn layui-btn-small">CSS</button>
-        <button class="layui-btn layui-btn-small">HTML</button>
+        <button class="layui-btn layui-btn-small <%= (article.type=='JAVASCRIPT' ? 'layui-btn-warm' : '')%>">JAVASCRIPT</button>
+        <button class="layui-btn layui-btn-small <%= (article.type=='CSS' ? 'layui-btn-warm' : '')%>">CSS</button>
+        <button class="layui-btn layui-btn-small <%= (article.type=='HTML' ? 'layui-btn-warm' : '')%>">HTML</button>
     </div>
 
     <h2>内容：</h2>
-    <input type="text" id="inputText" placeholder="选择图片后点击右侧按钮复制地址" autocomplete="off" class="layui-input img-url-input"/>
-    <input type="button" class="layui-btn" id="btn" value="复制"/>
+    <div class="layui-btn-group edit-menu">
+        <button class="layui-btn layui-btn-primary fa-picture-o">选择图片</button>
+        <input type="text" id="inputText" placeholder="选择图片后点击右侧按钮复制地址" autocomplete="off" class="layui-btn layui-btn-primary img-url-input"/>
+        <input type="button" class="layui-btn" id="btn" value="复制"/>>
+    </div>
+
 
     <div class="edit-area">
-        <textarea rows="4" value="<%= article.content%>"></textarea>
+
+        <textarea id="editContent" rows="4" cols="20"><%= article.content%></textarea>
     </div>
-    <button class="layui-btn save-btn">保存</button>
+
+    <button class="layui-btn save-btn" data-id=<%= article._id%>>保存</button>
 </div>
 <%})%>
 
 
 <% block('scripts', function() {%>
-<script src="/simplemde/simplemde.min.js"></script>
-
-<script>
-    let simplemde = new SimpleMDE();
-</script>
 <script src="/javascripts/article.js"></script>
 <%})%>
