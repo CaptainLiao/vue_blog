@@ -6,20 +6,13 @@
       <h1>THE NEWEST BLOG</h1>
       <h2>Essential Links</h2>
       <el-row type="flex" class="row-bg" justify="center">
-        <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item no-border fl">
-          <h3>推荐</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat incidunt itaque nobis odio velit. Ab at culpa dicta excepturi, facilis laudantium maiores mollitia, placeat quam quasi quos repellendus rerum sunt?</p>
+
+        <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item no-border fl" v-for="item in articles" :key="item">
+          <h3 v-bind:id="item._id">{{item.title}}</h3>
+          <p class="fay-section-preview">{{item.content}}</p>
         </el-col>
-        <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item fl">
-          <h3>推荐</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eaque, esse facilis fuga odio perspiciatis possimus. Consequuntur cumque delectus doloremque dolores exercitationem explicabo modi mollitia quia quidem sed veniam, veritatis?</p>
-        </el-col>
-        <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item fl">
-          <h3>联系方式</h3>
-          <p>
-            为什么要提升web性能？ Web性能黄金准则：只有10%~20%的最终用户响应时间花在了下载html文档上，其余的80%~90%时间花在了下载页面组件上
-          </p>
-        </el-col>
+
+
       </el-row>
     </section>
 
@@ -49,8 +42,21 @@
 
 <script type="text/javascript">
   export default {
+      data() {
+          return{
+            articles: []
+          }
+      },
       mounted() {
-
+        var _this = this;
+        _this.request.get('http://localhost:5000/article/list')
+          .then(function(res) {
+            console.log(res);
+            if(res.data.code === 0) {
+              _this.articles = res.data.articles.splice(0,3);
+              console.log(_this.articles)
+            }
+          })
       },
       components: {
           'blog-hello': require('@/components/hello'),
