@@ -36,23 +36,38 @@ ArticleSchema.statics = {
                 .sort('meta.updateAt')
                 .exec(cb);
     },
-    findById(id, cb) {
-        return this
-                .findOne({_id: id})
-                .exec(cb)
+
+    findById(id) {
+        let _this = this;
+        return new Promise((resolve, reject) => {
+            _this.findOne({_id: id}, (err, result)=> {
+                if(err) {
+                    reject(err)
+                } else {
+                    resolve(result);
+                }
+            })
+        })
     },
     delById(id, cb) {
         return this.remove({_id: id})
                 .exec(cb);
     },
-    updateById(id, newData, cb) {
+    updateById(id, newData) {
         let _this = this;
-        return _this.findById(id, (err, oldData) => {
-            if(err) throw new Error(err);
+        return new Promise((resolve, reject) => {
+            _this.findById(id)
+                    .then((oldData) => {
+                        _this.update(oldData, newData, (err, result) => {
+                            if(err) {
+                                reject(err);
+                            } else {
+                                resolve(result);
+                            }
+                        })
+                    })
+        });
 
-            _this.update(oldData, newData)
-                    .exec(cb);
-        })
     }
 };
 

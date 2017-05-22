@@ -14,11 +14,8 @@ let edit = (req, res, next) => {
     if(query && query.id) {
         let id = query.id.replace(/\"/g, '');
         console.log('id',id)
-        Article.findById(id, (err, data) => {
-            if(err) throw new Error(err);
-
-            res.render('article.art', { title: '修改文章', article: data });
-        });
+        Article.findById(id)
+                .then(data => res.render('article.art', { title: '修改文章', article: data }))
 
     } else {
         res.render('article.art', { title: '新建文章', article: {} });
@@ -42,13 +39,13 @@ let create = (req, res, next) => {
     if(id) {
         id = id.replace(/\"/g, '');
         console.log(id);
-        Article.updateById(id, articleObj, (err, result) => {
-            if(err) {
-                res.send({code: -1,msg: 'error',err})
-            }else {
-                res.send({code: 0, msg: 'success', result});
-            }
-        })
+        Article.updateById(id, articleObj)
+                .then(result => {
+                    res.send({code: 0, msg: 'success', result});
+                })
+                .catch(err => {
+                    res.send({code: -1,msg: 'error',err})
+                })
     }else {
         newArticle = new Article({
             content: articleObj.content,
