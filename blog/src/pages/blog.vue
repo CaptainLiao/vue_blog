@@ -42,6 +42,17 @@
 
 <script>
   export default {
+    data() {
+      return {
+        blog: {}
+      }
+    },
+    mounted() {
+        this.request.get('http://localhost:5000/article?id=591d83ca5906db21502fd8bf')
+          .then(function(res) {
+              console.log(res)
+          })
+    },
     components: {
       'blog-navbar': require('../components/sidebar')
     }
@@ -55,34 +66,34 @@
     text-align: left;
     padding: 0 10px;
 
-    .main {
-      position: relative;
-    }
-    blockquote {
-      margin: 10px 0 25px 0;
-      padding: 20px;
-      font-weight: 400;
-      word-break: break-all;
-      border-left: 4px solid #999;
-      background-color: #f7f7f7;
-    }
-    pre {
-      overflow-x: auto;
-      padding: 10px;
-      background-color: #f7f7f7;
-    }
+  .main {
+    position: relative;
+  }
+  blockquote {
+    margin: 10px 0 25px 0;
+    padding: 20px;
+    font-weight: 400;
+    word-break: break-all;
+    border-left: 4px solid #999;
+    background-color: #f7f7f7;
+  }
+  pre {
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #f7f7f7;
+  }
 
-    code {
-      font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
-      background-color: #f7f7f7;
-      color: navy;
-    }
+  code {
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    background-color: #f7f7f7;
+    color: navy;
+  }
 
 
-    h2 {
-      line-height: 2;
-      border-bottom: 1px solid #eee;
-    }
+  h2 {
+    line-height: 2;
+    border-bottom: 1px solid #eee;
+  }
 
   }
 

@@ -15,7 +15,14 @@ let edit = (req, res, next) => {
         let id = query.id.replace(/\"/g, '');
         console.log('id',id)
         Article.findById(id)
-                .then(data => res.render('article.art', { title: '修改文章', article: data }))
+                .then(data => {
+                    if(req.headers.referer.indexOf('5000') < 0) {
+                        res.send({ title: '修改文章', article: data })
+                    }else  {
+                        res.render('article.art', { title: '修改文章', article: data })
+                    }
+
+                })
 
     } else {
         res.render('article.art', { title: '新建文章', article: {} });
@@ -27,7 +34,13 @@ let list = (req, res, next) => {
     Article.fetch((err, data) => {
         if(err) throw new Error(err);
 
-        res.render('articleList.art', { title: '文章列表', articles: data } );
+        if(req.headers.referer.indexOf('5000') < 0) {
+            res.send({ title: '文章列表', articles: data ,code: 0})
+        }else {
+            res.render('articleList.art', { title: '文章列表', articles: data } );
+        }
+
+
     })
 };
 
@@ -78,6 +91,7 @@ let del = (req, res, next) => {
 
 };
 
+
 // 文章编辑主页
 router.get('/', someMiddleware, edit);
 
@@ -89,5 +103,7 @@ router.post('/new', create);
 
 // 删除文章
 router.post('/del', del);
+
+
 
 module.exports = router;

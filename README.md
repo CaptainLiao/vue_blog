@@ -23,6 +23,6 @@
 1.  git clone https://github.com/CaptainLiao/vue_blog.git
 2.  cd blog_end
 3.  npm install
-4.  开启数据库：mongod --dbpath d:/MongoDB/data
+4.  新开一个CMD开启数据库：mongod --dbpath d:/MongoDB/data
 5.  set DEBUG=blog_end & npm start
 6.  在浏览器地址栏键入：http://localhost:5000

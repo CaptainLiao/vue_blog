@@ -20,10 +20,9 @@ let ArticleSchema = new Schema({
 });
 
 
-ArticleSchema.pre('save', function(next) {
-    if (this.isNew) {
-        this.meta.updateAt = this.meta.createAt = Date.now();
-    } else {
+ArticleSchema.pre('update', function(next) {
+
+    if(this.meta.createAt !== Date.now()) {
         this.meta.updateAt = Date.now();
     }
 
@@ -55,6 +54,7 @@ ArticleSchema.statics = {
     },
     updateById(id, newData) {
         let _this = this;
+
         return new Promise((resolve, reject) => {
             _this.findById(id)
                     .then((oldData) => {

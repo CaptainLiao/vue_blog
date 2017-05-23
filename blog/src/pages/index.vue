@@ -8,7 +8,7 @@
       <el-row type="flex" class="row-bg" justify="center">
 
         <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item no-border fl" v-for="item in articles" :key="item">
-          <h3 v-bind:id="item._id">{{item.title}}</h3>
+          <h3 v-bind:id="item._id" @click="jumpDetail(item._id)">{{item.title}}</h3>
           <p class="fay-section-preview">{{item.content}}</p>
         </el-col>
 
@@ -58,6 +58,11 @@
             }
           })
       },
+      methods: {
+        jumpDetail: function(id) {
+            this.$router.push('/blog?id=' + id);
+        }
+      },
       components: {
           'blog-hello': require('@/components/hello'),
           'blog-banner': require('@/components/banner')
@@ -89,6 +94,7 @@
       font-weight: normal;
     }
     h3 {
+      cursor: pointer;
       color: @title-color;
     }
 
