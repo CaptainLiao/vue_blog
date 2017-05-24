@@ -27,14 +27,16 @@
   .blog-sidebar {
     position: absolute;
     top: 40px;
-    right: -160px;
+    right: -200px;
 
     width: 140px;
 
   }
   ul {
     margin: 20px 0 0 0;
+    padding: 0;
     font-size: 14px;
+    list-style-type: none;
   }
   li {
     padding: 0 0 0 20px;

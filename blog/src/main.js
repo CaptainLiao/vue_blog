@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from '@/App'
 import router from '@/router'
 import axios from 'axios'
+import config from './config'
 
 // 引入外部css
 import './assets/less/reset.less'
@@ -14,6 +15,7 @@ import './assets/less/main.less'
 
 Vue.use(ElementUI);
 Vue.prototype.request = axios;
+Vue.prototype.config = config;
 
 Vue.config.productionTip = false;
 

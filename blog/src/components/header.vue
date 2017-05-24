@@ -25,7 +25,7 @@
           return {
               urls: [
                 {url: '/', message: '首页'},
-                {url: '/blog', message: 'blog'},
+                {url: '/blog/list', message: 'blog'},
                 {url: '/project', message: '项目'},
                 {url: '/about', message: '关于'},
               ],

@@ -6,6 +6,7 @@ import Index from '@/pages/index'
 import Blog from '@/pages/blog'
 import Project from '@/pages/project'
 import About from '@/pages/about'
+import List from '@/pages/list'
 
 
 Vue.use(Router);
@@ -20,6 +21,13 @@ let blog = {
   path: '/blog',
   name: 'Blog',
   component: Blog
+};
+
+
+let list = {
+  path: '/blog/list',
+  name: 'List',
+  component: List
 };
 
 let project = {
@@ -37,5 +45,5 @@ let about = {
 export default new Router({
   mode: 'history',
   base: __dirname,
-  routes: [index, blog, project, about]
+  routes: [index, blog, project, about, list]
 })

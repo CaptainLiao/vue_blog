@@ -49,11 +49,12 @@
       },
       mounted() {
         var _this = this;
-        _this.request.get('http://localhost:5000/article/list')
+        _this.request.get(_this.config.getApi('article_list'))
           .then(function(res) {
             console.log(res);
             if(res.data.code === 0) {
-              _this.articles = res.data.articles.splice(0,3);
+                var articles = res.data.articles;
+              _this.articles = articles.splice(articles.length - 3,3);
               console.log(_this.articles)
             }
           })
@@ -70,7 +71,7 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   @import "../assets/less/global.less";
 
   .fay-section-item {
@@ -89,7 +90,7 @@
   }
 
   .fay-section {
-    padding: 40px 10px;
+    padding: 40px 20px;
     h1,h2,h3 {
       font-weight: normal;
     }
@@ -114,7 +115,7 @@
     }
     .fay-section-item {
       border: 0;
-      padding: 0;
+      padding: 0 20px;
       margin-top: 10px;
     }
   }
