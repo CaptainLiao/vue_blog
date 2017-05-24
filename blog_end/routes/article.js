@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let Article = require('../models/article');
+let marked = require('marked');
 
 // middleware
 let someMiddleware = (req, res, next) => {
@@ -13,17 +14,23 @@ let edit = (req, res, next) => {
     let query = req.query;
     if(query && query.id) {
         let id = query.id.replace(/\"/g, '');
-        console.log('id',id)
+
         Article.findById(id)
                 .then(data => {
-                    if(req.headers.referer.indexOf('5000') < 0) {
+                    if(req.headers.referer && req.headers.referer.indexOf('5000') < 0) {
+                        let content = data.content;
+                        marked.setOptions({
+                            highlight: function(code) {
+                                return require('highlight.js').highlightAuto(code).value;
+                            }
+                        });
+                        data.content = marked(content);
                         res.send({ title: '修改文章', article: data })
                     }else  {
                         res.render('article.art', { title: '修改文章', article: data })
                     }
 
                 })
-
     } else {
         res.render('article.art', { title: '新建文章', article: {} });
     }
@@ -34,12 +41,11 @@ let list = (req, res, next) => {
     Article.fetch((err, data) => {
         if(err) throw new Error(err);
 
-        if(req.headers.referer.indexOf('5000') < 0) {
+        if(req.headers.referer && req.headers.referer.indexOf('5000') < 0) {
             res.send({ title: '文章列表', articles: data ,code: 0})
         }else {
             res.render('articleList.art', { title: '文章列表', articles: data } );
         }
-
 
     })
 };

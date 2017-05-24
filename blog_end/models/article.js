@@ -22,9 +22,9 @@ let ArticleSchema = new Schema({
 
 ArticleSchema.pre('update', function(next) {
 
-    if(this.meta.createAt !== Date.now()) {
-        this.meta.updateAt = Date.now();
-    }
+    // if(this.meta.createAt !== Date.now()) {
+    //     this.meta.updateAt = Date.now();
+    // }
 
     next();
 });
