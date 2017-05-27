@@ -12,11 +12,9 @@
                 <span>{{oitem.meta.createAt.substring(8, 10)}}日</span><small>{{oitem.meta.createAt.substring(11, 16)}}</small>
               </div>
               <div class="b-main">
-                <h2 class="b-title said-ellipsis">
-                  <a class="b-title"  v-bind:id="oitem._id" @click="jumpDetail(oitem._id)" title="点击查看文章">
-                    {{oitem.title}}
-                  </a>
-                </h2>
+                <a class="b-title"  v-bind:id="oitem._id" @click="jumpDetail(oitem._id)" title="点击查看文章">
+                  {{oitem.title}}
+                </a>
 
                 <footer class="b-footer">
                 <span class="b-info link fa fa-th-large" title="分类">
@@ -162,7 +160,7 @@
     cursor: pointer;
   }
   .b-footer {
-    padding-bottom: 3px;
+    padding: 10px 0 6px;
     color: #999;
   .b-info {
     vertical-align: bottom;

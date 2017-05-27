@@ -19,7 +19,7 @@
                 contentType: false,
                 success: function (data) {
 
-                    var url = data.data.src.split('//')[1];
+                    var url = data.data.src;
                     var inputText = document.getElementById('inputText');
 
                     inputText.value = url;

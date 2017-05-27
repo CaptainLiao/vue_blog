@@ -42,8 +42,17 @@ let about = {
   component: About
 };
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition
+  } else {
+    return { x: 0, y: 0 }
+  }
+};
+
 export default new Router({
   mode: 'history',
   base: __dirname,
+  scrollBehavior,
   routes: [index, blog, project, about, list]
 })

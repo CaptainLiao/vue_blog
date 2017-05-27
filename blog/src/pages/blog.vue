@@ -1,12 +1,12 @@
 <template>
 
   <div id="fay-blog">
-
+    <liao-fei-yin></liao-fei-yin>
 
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :xs="24" :sm="14" :md="16" :lg="12" class="main fl">
 
-        <blog-navbar></blog-navbar>
+        <!--<blog-navbar></blog-navbar>-->
         <h1 class="fay-blog-title" v-html="blog.title"></h1>
         <div v-html="blog.content"></div>
 
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import $ from 'jquery'
   export default {
     data() {
       return {
@@ -24,20 +25,32 @@
       }
     },
     mounted() {
-        let _this = this;
-        let query = this.$route.query;
-        console.log(_this.config)
+      let _this = this;
+      let query = this.$route.query;
+      console.log(_this.config)
       _this.request.get(_this.config.getApi('article') +'?id=' + query.id)
-          .then(function(res) {
-              var data = res.data;
-              console.log(data);
-              if(data) {
-                _this.blog = data.article;
-                hljs.initHighlightingOnLoad();
-              }
-          })
+        .then(function(res) {
+          var data = res.data;
+          console.log(data);
+          if(data) {
+            _this.blog = data.article;
+
+          }
+
+        });
+      var timer = null;
+      document.body.onscroll = function() {
+        var height = $(document).height();
+        var winH = $(window).height();
+        var scrollTop = $(window).scrollTop();
+        $('.state-bar').width(scrollTop/(height-winH) *100 +'%');
+      }
+    },
+    methods: {
+
     },
     components: {
+      'liao-fei-yin': require('../components/stateBar'),
       'blog-navbar': require('../components/sidebar')
     }
   }
