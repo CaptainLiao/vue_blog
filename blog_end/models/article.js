@@ -32,7 +32,8 @@ ArticleSchema.pre('update', function(next) {
 ArticleSchema.statics = {
     fetch(cb) {
         return this.find({})
-                .sort('meta.updateAt')
+                .sort({'_id':-1})
+
                 .exec(cb);
     },
 

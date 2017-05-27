@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 let Article = require('../models/article');
 let marked = require('marked');
+let moment = require('moment');
 
 // middleware
 let someMiddleware = (req, res, next) => {
@@ -80,8 +81,6 @@ let create = (req, res, next) => {
         });
     }
 
-
-
 };
 
 let del = (req, res, next) => {
@@ -97,12 +96,33 @@ let del = (req, res, next) => {
 
 };
 
+let archive = (req, res, next) => {
+    Article.fetch((err, data) => {
+        if(err) {
+            res.send({ err});
+            return;
+        }
+
+        data.map(function (item) {
+            item.content = '';
+            console.log(delete item.content);
+            return item;
+        });
+
+        res.send({ articles: data ,code: 0})
+
+    })
+};
 
 // 文章编辑主页
 router.get('/', someMiddleware, edit);
 
-// 文章列表
+// 文章所有列表
 router.get('/list', list);
+
+// 文章标题列表
+router.get('/archive', archive);
+
 
 // 文章新增
 router.post('/new', create);
