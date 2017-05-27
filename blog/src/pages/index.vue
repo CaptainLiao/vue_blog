@@ -84,8 +84,8 @@
     border: 0;
   }
   @media screen and (max-width: @xs-width) {
-    #fay-index {
-      margin-bottom: 221px;
+    #fay {
+      margin-bottom: 280px;
     }
   }
 

@@ -38,12 +38,12 @@
           }
 
         });
-      var timer = null;
       document.body.onscroll = function() {
         var height = $(document).height();
         var winH = $(window).height();
         var scrollTop = $(window).scrollTop();
         $('.state-bar').width(scrollTop/(height-winH) *100 +'%');
+        console.log(1)
       }
     },
     methods: {
