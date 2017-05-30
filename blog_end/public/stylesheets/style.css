@@ -30,6 +30,9 @@
   position: fixed;
   left: 0;
   top: 0;
+  overflow: scroll;
+  z-index: -1;
+  height: 100%;
   box-sizing: border-box;
   padding: 60px 0 0 200px;
 }

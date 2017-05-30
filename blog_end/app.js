@@ -8,12 +8,17 @@ let artTemplate = require('express-art-template');
 let template = require('art-template');
 let multer = require('multer');
 
+let env = process.env.NODE_ENV || 'development';
+
 let app = express();
 app.locals.moment = require('moment');
 
 let mongoose = require('mongoose');
-const DB_URL = 'mongodb://localhost/vueBlog'
+const DB_URL = 'mongodb://fayinme_blog:fayinme_blog39108@127.0.0.1:19999/vueBlog'
 
+if(env === 'development') {
+  DB_URL = 'mongodb://localhost/vueBlog'
+}
 // 连接数据库
 mongoose.connect(DB_URL);
 let db = mongoose.connection;

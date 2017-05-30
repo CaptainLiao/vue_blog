@@ -1,0 +1,29 @@
+{
+    "apps": [
+        {
+            "name": "Blogsite",
+            "script": "app.js",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "blog_manager",
+            "host": ["39.108.54.110"],
+            "port": "3999",
+            "ref": "origin/master",
+            "repo": "https://github.com/CaptainLiao/vue_blog.git",
+            "path": "/www/blogsite/production",
+            "ssh_options": "StrictHostKeyChecing=no",
+            "post-deploy": "cd blog_end && npm install && npm start && pm2 startOrRestart ecosystem.json --env production",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}

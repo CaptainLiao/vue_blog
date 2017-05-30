@@ -40,6 +40,9 @@ db.createUser({user: 'fayin_blog', pwd: 'fayin_blog@39.108', roles: [{
     db: 'vueBlog'
 }])
 
+db.createUser({user: 'fayinme_blog', pwd: 'fayinme_blog39108'}, roles: [{role: 'readWrite',db:'vueBlog'}])
+
+
 // 创建用户 fayin_blog_read 对数据库 vueBlog 拥有读权限。
 use vueBlog
 
