@@ -13,7 +13,7 @@
     ],
     "deploy": {
         "production": {
-            "user": "blog_manager",
+            "user": "fayin",
             "host": ["39.108.54.110"],
             "port": "3999",
             "ref": "origin/master",
