@@ -1,8 +1,8 @@
 {
     "apps": [
         {
-            "name": "Blogfront",
-            "script": "./build/dev-server.js",
+            "name": "Blogend",
+            "script": "/www/blogend/production/source/bin/www",
             "env": {
                 "COMMON_VARIABLE": "true"
             },
@@ -17,8 +17,8 @@
             "host": ["39.108.54.110"],
             "port": "3999",
             "ref": "origin/master",
-            "repo": "https://github.com/CaptainLiao/blogfront.git",
-            "path": "/www/blogfront/production",
+            "repo": "https://github.com/CaptainLiao/vueBlog_end.git",
+            "path": "/www/blogend/production",
             "ssh_options": "StrictHostKeyChecking=no",
             "post-deploy": "npm install && pm2 startOrRestart ecosystem.json --env production",
             "env": {

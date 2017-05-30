@@ -26,3 +26,7 @@
 4.  新开一个CMD开启数据库：mongod --dbpath d:/MongoDB/data
 5.  set DEBUG=blog_end & npm start
 6.  在浏览器地址栏键入：http://localhost:5000
+
+pm2 部署
+
+`pm2 deploy ecosystem.json production setup`
