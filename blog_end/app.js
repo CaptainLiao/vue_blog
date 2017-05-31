@@ -61,6 +61,7 @@ app.use('/article', require('./routes/article'));
 app.use('/uploadImg', require('./routes/uploadImg'));
 app.use('/users', users);
 app.use('/login', require('./routes/login'));
+app.use('/register', require('./routes/register'));
 
 
 // catch 404 and forward to error handler
@@ -69,6 +70,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
