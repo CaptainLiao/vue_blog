@@ -1,0 +1,14 @@
+header, nav {
+	display: none;
+}
+
+.blog-login {
+	max-width: 600px;
+	margin: 120px auto 0;
+}
+
+.a-small {
+	font-size: 12px;
+	cursor: pointer;
+	text-decoration: underline;
+}

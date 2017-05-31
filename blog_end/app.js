@@ -60,6 +60,7 @@ app.use('/', index);
 app.use('/article', require('./routes/article'));
 app.use('/uploadImg', require('./routes/uploadImg'));
 app.use('/users', users);
+app.use('/login', require('./routes/login'));
 
 
 // catch 404 and forward to error handler
