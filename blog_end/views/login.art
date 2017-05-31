@@ -1,0 +1,43 @@
+<% extend('./components/layout.art')%>
+
+<% block('title', function() {%>
+{{title}}
+<%})%>
+
+<% block('head', function() {%>
+<link rel="stylesheet" href="stylesheets/">
+<%})%>
+
+<% block('content', function() {%>
+<fieldset class="layui-elem-field">
+    <legend>用户登录</legend>
+    <div class="layui-field-box">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">账号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入账号" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">登录</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</fieldset>
+<%})%>
+
+<% block('scripts', function() {%>
+<script>
+
+</script>
+<%})%>
