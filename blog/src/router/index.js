@@ -2,14 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // 视图页面
-import Index from '@/pages/index'
-import Blog from '@/pages/blog'
-import Project from '@/pages/project'
-import About from '@/pages/about'
-import List from '@/pages/list'
+// import Index from '@/pages/index'
+// import Blog from '@/pages/blog'
+// import Project from '@/pages/project'
+// import About from '@/pages/about'
+// import List from '@/pages/list'
 
 
 Vue.use(Router);
+
+const Index = resolve => require(['@/pages/index'], resolve)
+const Blog = resolve => require(['@/pages/blog'], resolve)
+const Project = resolve => require(['@/pages/project'], resolve)
+const About = resolve => require(['@/pages/list'], resolve)
+const List = resolve => require(['@/pages/list'], resolve)
 
 let index = {
   path: '/',
@@ -22,7 +28,6 @@ let blog = {
   name: 'Blog',
   component: Blog
 };
-
 
 let list = {
   path: '/blog/list',

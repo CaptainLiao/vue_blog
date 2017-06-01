@@ -7,15 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
+    <script>
+      var i = new Date();
+
+      console.log(i);
+
+      for(var t=0;t<1000000000;t++) {
+
+      }
+    </script>
     <link rel="stylesheet" href="/static/style/normalize.css">
     <link rel="shortcut icon" href="/src/assets/favicon.ico" />
     <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <!--<style>-->
+      <!--html,body {-->
+        <!--height: 100%;-->
+      <!--}-->
+      <!--.loading {-->
+        <!--position: relative;-->
+        <!--width: 80%;-->
+        <!--height: 100%;-->
+        <!--margin: 0 auto;-->
+      <!--}-->
+      <!--.loading-bar {-->
+        <!--position: absolute;-->
+        <!--left: 0;-->
+        <!--top: 50%;-->
+        <!--width: 20px;-->
+        <!--height: 4px;-->
+        <!--background-color: #01AAED;-->
+      <!--}-->
 
-
+      <!--.inline-bar {-->
+        <!--background-color: #ccc;-->
+        <!--width: 100%;-->
+      <!--}-->
+      <!--.loading-num {-->
+        <!--position: absolute;-->
+        <!--left: 50%;-->
+        <!--top: 45%;-->
+      <!--}-->
+    <!--</style>-->
   </head>
   <body>
+    <div class="loading">
+      <span class="loading-num">0%</span>
+      <span class="loading-bar inline-bar"></span>
+      <span class="loading-bar"></span>
+
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+
+          console.log(Date.parse(new Date()) - Date.parse(i));
+        console.log("DOM fully loaded and parsed");
+      });
+    </script>
     <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
   </body>
