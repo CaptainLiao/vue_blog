@@ -1,7 +1,9 @@
-// 上传文章
-
+// 用户注册、登录
+let bcrypt = require('bcrypt');
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
+
+const saltRounds = 10;
 
 let UserSchema = new Schema({
     name: String,
@@ -19,14 +21,34 @@ let UserSchema = new Schema({
 });
 
 
-UserSchema.pre('update', function(next) {
+UserSchema.pre('save', function(next) {
 
     // if(this.meta.createAt !== Date.now()) {
     //     this.meta.updateAt = Date.now();
     // }
+    let _this = this;
 
-    next();
+    bcrypt.genSalt(saltRounds, (err, salt) => {
+        if(err) return next(err);
+        bcrypt.hash(_this.pwd, salt, (err, hash) => {
+            if(err) return next(err);
+
+            _this.pwd = hash;
+            next();
+        })
+    });
+
 });
+
+UserSchema.methods = {
+    comparePassword(pwd, cb) {
+        bcrypt.compare(pwd, this.pwd, (err, result) => {
+            if(err) return cb(err);
+
+            cb(null, result);
+        })
+    }
+};
 
 UserSchema.statics = {
     fetch(cb) {
@@ -49,19 +71,23 @@ UserSchema.statics = {
         })
     },
 
-    updateById(id, newData) {
+    updateByName(name, newData) {
         let _this = this;
-
         return new Promise((resolve, reject) => {
-            _this.findById(id)
+            _this.findByName(name)
                     .then((oldData) => {
-                        _this.update(oldData, newData, (err, result) => {
-                            if(err) {
-                                reject(err);
-                            } else {
-                                resolve(result);
-                            }
-                        })
+                        if(oldData) {
+                            _this.update(oldData, newData, (err, result) => {
+                                if(err) {
+                                    reject(err);
+                                } else {
+                                    resolve(result);
+                                }
+                            })
+                        } else {
+                            reject(oldData);
+                        }
+
                     })
         });
 

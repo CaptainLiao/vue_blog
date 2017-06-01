@@ -15,7 +15,7 @@
 2.  cd blog
 3.  npm install
 4.  npm run dev
-5.  在浏览器地址栏键入：http://localhost:8080
+5.  在浏览器地址栏键入：http://localhost:5555
 
 ## 后端实现：node + express + mongoDB
 

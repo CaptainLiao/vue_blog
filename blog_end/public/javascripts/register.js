@@ -10,8 +10,13 @@ $(function() {
             pwd,
             confirmPwd
         };
+        let url = '/user/register';
+        let id = $(this).attr('id');
+        if(id === 'editPwd') {
+            url = '/user/edit'
+        }
         $.ajax({
-            url: '/register',
+            url,
             method: 'POST',
             dataType: 'json',
             data: body,

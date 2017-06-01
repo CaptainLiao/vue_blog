@@ -54,14 +54,12 @@ app.all('*', function(req, res, next) {
 });
 
 let index = require('./routes/index');
-let users = require('./routes/users');
+let user = require('./routes/user');
 
 app.use('/', index);
 app.use('/article', require('./routes/article'));
 app.use('/uploadImg', require('./routes/uploadImg'));
-app.use('/users', users);
-app.use('/login', require('./routes/login'));
-app.use('/register', require('./routes/register'));
+app.use('/user', user);
 
 
 // catch 404 and forward to error handler

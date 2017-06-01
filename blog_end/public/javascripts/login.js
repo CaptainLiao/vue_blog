@@ -9,7 +9,7 @@ $(function() {
             pwd
         };
         $.ajax({
-            url: '/login',
+            url: '/user/login',
             method: 'POST',
             dataType: 'json',
             data: body,
