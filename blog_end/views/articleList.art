@@ -61,9 +61,10 @@
 <script>
     $(function() {
         $('.layui-table').on('click', 'button', function() {
-            var $thisClasses = $(this).attr('class').split(' ');
-            var $this = $thisClasses[$thisClasses.length - 1].trim();
-            var id = decodeURIComponent($(this).parent().attr('id'));
+            var $this = $(this);
+            var $thisClasses = $this.attr('class').split(' ');
+            var $thisClass = $thisClasses[$thisClasses.length - 1].trim();
+            var id = decodeURIComponent($this.parent().attr('id'));
             var del = function() {
                 $.ajax({
                     url: '/article/del',
@@ -80,7 +81,7 @@
                     }
                 })
             };
-            switch ($this) {
+            switch ($thisClass) {
                 case 'edit-preview':
                     location.href = '/article?id=' + id;
                     break;
@@ -88,20 +89,31 @@
                     location.href = '/article?id=' + id;
                     break;
                 case 'edit-del':
-                    $.ajax({
-                        url: '/article/del',
-                        method: 'POST',
-                        dataType: 'json',
-                        data: {
-                            id: id
-                        },
-                        success: function(res) {
-                            console.log(res);
-                        },
-                        error: function (err) {
-                            console.log(err)
-                        }
+                    layer.open({
+                        title: 'FBI WARNING'
+                        ,content: '宝贝儿，你真的忍心删掉我么？'
+                    });
+                    $('.layui-layer-btn0').click(function () {
+
+                        $.ajax({
+                            url: '/api/article/del',
+                            method: 'POST',
+                            dataType: 'json',
+                            data: {
+                                id: id
+                            },
+                            success: function(res) {
+                                console.log(res);
+                                if(res.code === 0) {
+                                    $this.parents('tr').remove();
+                                }
+                            },
+                            error: function (err) {
+                                console.log(err)
+                            }
+                        })
                     })
+
                     break;
             }
 

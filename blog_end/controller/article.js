@@ -17,19 +17,7 @@ exports.edit = (req, res, next) => {
 
         Article.findById(id)
                 .then(data => {
-                    if(req.headers.referer && req.headers.referer.indexOf('5000') < 0) {
-                        let content = data.content;
-                        marked.setOptions({
-                            highlight: function(code) {
-                                return require('highlight.js').highlightAuto(code).value;
-                            }
-                        });
-                        data.content = marked(content);
-                        res.send({ title: '修改文章', article: data })
-                    }else  {
-                        res.render('article.art', { title: '修改文章', article: data })
-                    }
-
+                    res.render('article.art', { title: '修改文章', article: data })
                 })
     } else {
         res.render('article.art', { title: '新建文章', article: {} });
@@ -41,15 +29,11 @@ exports.list = (req, res, next) => {
     Article.fetch((err, data) => {
         if(err) throw new Error(err);
 
-        if(req.headers.referer && req.headers.referer.indexOf('5000') < 0) {
-            res.send({ title: '文章列表', articles: data ,code: 0})
-        }else {
-            res.render('articleList.art', { title: '文章列表', articles: data } );
-            return output({ title: '文章列表', articles: data ,code: 0})
-        }
+        res.render('articleList.art', { title: '文章列表', articles: data } );
 
     })
 };
+
 
 exports.create = (req, res, next) => {
     let articleObj = req.body;
@@ -114,4 +98,33 @@ exports.archive = (req, res, next) => {
     })
 };
 
+exports.apiList = (req, res, next) => {
+    Article.fetch((err, data) => {
+        if(err) throw new Error(err);
+        res.send({ title: '文章列表', articles: data ,code: 0})
+    })
+};
+
+exports.apiDetail = (req, res, next) => {
+    console.log(req.query.id);
+    let query = req.query;
+    if(query && query.id) {
+        let id = query.id.replace(/\"/g, '');
+
+        Article.findById(id)
+                .then(data => {
+                    let content = data.content;
+                    marked.setOptions({
+                        highlight: function(code) {
+                            return require('highlight.js').highlightAuto(code).value;
+                        }
+                    });
+                    data.content = marked(content);
+                    res.send({ msg: '文章详情', article: data })
+
+                })
+    } else {
+        res.send('article.art', { msg: '文章详情', article: {} });
+    }
+};
 

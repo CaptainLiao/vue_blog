@@ -54,7 +54,7 @@
             console.log(res);
             if(res.data.code === 0) {
                 var articles = res.data.articles;
-              _this.articles = articles.splice(articles.length - 3,3);
+              _this.articles = articles.splice(0,3);
               console.log(_this.articles)
             }
           })

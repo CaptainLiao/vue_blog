@@ -36,6 +36,7 @@
     });
 
 
+
     btn.addEventListener('click', function(){
         var inputText = document.getElementById('inputText');
         var currentFocus = document.activeElement;

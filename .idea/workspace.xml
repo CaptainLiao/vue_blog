@@ -3,14 +3,127 @@
   <component name="ChangeListManager">
     <list default="true" id="0b4a9f52-82d2-457e-801b-643f89d2716b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/src/config.js" afterPath="$PROJECT_DIR$/blog/src/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/src/pages/index.vue" afterPath="$PROJECT_DIR$/blog/src/pages/index.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/app.js" afterPath="$PROJECT_DIR$/blog_end/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/controller/article.js" afterPath="$PROJECT_DIR$/blog_end/controller/article.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/public/javascripts/article.js" afterPath="$PROJECT_DIR$/blog_end/public/javascripts/article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/public/javascripts/login.js" afterPath="$PROJECT_DIR$/blog_end/public/javascripts/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/public/javascripts/register.js" afterPath="$PROJECT_DIR$/blog_end/public/javascripts/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/routes/article.js" afterPath="$PROJECT_DIR$/blog_end/routes/article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/routes/index.js" afterPath="$PROJECT_DIR$/blog_end/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/routes/uploadImg.js" afterPath="$PROJECT_DIR$/blog_end/routes/uploadImg.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/qiniuUpload.js" afterPath="$PROJECT_DIR$/blog_end/public/javascripts/qiniuUpload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/routes/router.js" afterPath="$PROJECT_DIR$/blog_end/routes/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/views/article.art" afterPath="$PROJECT_DIR$/blog_end/views/article.art" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/views/articleList.art" afterPath="$PROJECT_DIR$/blog_end/views/articleList.art" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/views/components/layout.art" afterPath="$PROJECT_DIR$/blog_end/views/components/layout.art" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/views/login.art" afterPath="$PROJECT_DIR$/blog_end/views/login.art" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_end/views/register.art" afterPath="$PROJECT_DIR$/blog_end/views/register.art" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/layui.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/layui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/layui.mobile.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/layui.mobile.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/code.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/code.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/laydate/icon.png" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/laydate/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/laydate/laydate.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/laydate/laydate.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/icon-ext.png" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/icon-ext.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/icon.png" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/layer.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/layer.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/loading-0.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/loading-0.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/loading-1.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/loading-1.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/css/modules/layer/default/loading-2.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/css/modules/layer/default/loading-2.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/font/iconfont.eot" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/font/iconfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/font/iconfont.svg" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/font/iconfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/font/iconfont.ttf" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/font/iconfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/font/iconfont.woff" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/font/iconfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/0.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/0.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/1.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/1.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/10.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/10.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/11.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/11.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/12.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/12.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/13.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/13.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/14.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/14.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/15.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/15.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/16.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/16.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/17.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/17.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/18.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/18.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/19.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/19.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/2.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/2.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/20.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/20.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/21.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/21.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/22.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/22.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/23.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/23.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/24.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/24.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/25.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/25.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/26.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/26.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/27.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/27.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/28.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/28.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/29.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/29.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/3.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/3.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/30.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/30.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/31.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/31.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/32.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/32.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/33.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/33.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/34.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/34.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/35.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/35.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/36.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/36.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/37.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/37.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/38.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/38.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/39.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/39.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/4.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/4.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/40.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/40.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/41.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/41.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/42.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/42.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/43.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/43.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/44.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/44.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/45.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/45.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/46.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/46.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/47.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/47.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/48.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/48.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/49.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/49.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/5.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/5.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/50.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/50.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/51.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/51.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/52.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/52.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/53.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/53.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/54.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/54.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/55.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/55.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/56.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/56.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/57.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/57.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/58.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/58.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/59.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/59.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/6.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/6.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/60.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/60.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/61.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/61.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/62.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/62.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/63.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/63.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/64.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/64.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/65.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/65.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/66.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/66.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/67.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/67.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/68.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/68.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/69.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/69.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/7.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/7.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/70.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/70.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/71.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/71.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/8.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/8.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/images/face/9.gif" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/images/face/9.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/all-mobile.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/all-mobile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/all.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/all.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/code.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/code.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/element.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/element.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/flow.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/flow.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/form.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/form.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/jquery.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/laydate.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/laydate.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/layedit.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/layedit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/layer.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/layer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/laypage.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/laypage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/laytpl.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/laytpl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/mobile.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/mobile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/mobile/layer-mobile.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/mobile/layer-mobile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/mobile/layim-mobile-open.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/mobile/layim-mobile-open.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/mobile/upload-mobile.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/mobile/upload-mobile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/mobile/zepto.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/mobile/zepto.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/tree.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/tree.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/upload.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/upload.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/lay/modules/util.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/lay/modules/util.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/layui/layui.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/layui/layui.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/simplemde/simplemde.min.css" afterPath="$PROJECT_DIR$/blog_end/public/lib/simplemde/simplemde.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/blog_end/public/simplemde/simplemde.min.js" afterPath="$PROJECT_DIR$/blog_end/public/lib/simplemde/simplemde.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +144,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog_end/routes/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="496">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.art" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/views/login.art">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/public/javascripts/article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-399">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.art" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog_end/views/register.art">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articleList.art" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/views/articleList.art">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="98" column="35" lean-forward="false" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/controller/article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="100" column="15" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="15" />
+              <folding>
+                <marker date="1496392963750" expanded="true" signature="2551:3239" ph="{...}" />
+                <marker date="1496392963750" expanded="true" signature="2637:3161" ph="{...}" />
+                <marker date="1496392963750" expanded="true" signature="2745:3154" ph="{...}" />
+                <marker date="1496392963750" expanded="true" signature="3167:3237" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/src/pages/blog.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="46" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.art" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_end/views/article.art">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -71,6 +279,8 @@
       <find>moment</find>
       <find>multer</find>
       <find>fs</find>
+      <find>edit-del</find>
+      <find>list</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -89,14 +299,10 @@
         <option value="$PROJECT_DIR$/blog_end/routes/uploadImg.js" />
         <option value="$PROJECT_DIR$/blog_end/views/m.art.html" />
         <option value="$PROJECT_DIR$/blog_end/public/stylesheets/index.css" />
-        <option value="$PROJECT_DIR$/blog_end/views/components/layout.art" />
         <option value="$PROJECT_DIR$/blog_end/public/stylesheets/article.css" />
-        <option value="$PROJECT_DIR$/blog_end/views/article.art" />
-        <option value="$PROJECT_DIR$/blog_end/views/articleList.art" />
         <option value="$PROJECT_DIR$/blog/src/main.js" />
         <option value="$PROJECT_DIR$/blog/src/components/sidebar.vue" />
         <option value="$PROJECT_DIR$/blog/src/components/header.vue" />
-        <option value="$PROJECT_DIR$/blog/src/config.js" />
         <option value="$PROJECT_DIR$/blog/src/assets/js/utils.js" />
         <option value="$PROJECT_DIR$/blog_end/models/article.js" />
         <option value="$PROJECT_DIR$/blog/src/assets/less/main.less" />
@@ -106,7 +312,6 @@
         <option value="$PROJECT_DIR$/blog/package.json" />
         <option value="$PROJECT_DIR$/blog/src/components/stateBar.vue" />
         <option value="$PROJECT_DIR$/blog/src/pages/blog.vue" />
-        <option value="$PROJECT_DIR$/blog/src/pages/index.vue" />
         <option value="$PROJECT_DIR$/blog/src/components/footer.vue" />
         <option value="$PROJECT_DIR$/blog_end/public/stylesheets/login.css" />
         <option value="$PROJECT_DIR$/blog_end/models/login.js" />
@@ -118,8 +323,6 @@
         <option value="$PROJECT_DIR$/blog_end/routes/users.js" />
         <option value="$PROJECT_DIR$/blog_end/routes/login.js" />
         <option value="$PROJECT_DIR$/blog_end/routes/register.js" />
-        <option value="$PROJECT_DIR$/blog_end/views/login.art" />
-        <option value="$PROJECT_DIR$/blog_end/views/register.art" />
         <option value="$PROJECT_DIR$/blog_end/models/user.js" />
         <option value="$PROJECT_DIR$/blog_end/routes/user.js" />
         <option value="$PROJECT_DIR$/blog_end/routes/article.js" />
@@ -129,12 +332,19 @@
         <option value="$PROJECT_DIR$/blog_end/public/javascripts/login.js" />
         <option value="$PROJECT_DIR$/blog_end/public/javascripts/register.js" />
         <option value="$PROJECT_DIR$/blog_end/controller/index.js" />
-        <option value="$PROJECT_DIR$/blog_end/controller/article.js" />
-        <option value="$PROJECT_DIR$/blog_end/public/javascripts/article.js" />
         <option value="$PROJECT_DIR$/blog_end/router.js" />
+        <option value="$PROJECT_DIR$/blog_end/controller/uploadImg.js" />
+        <option value="$PROJECT_DIR$/blog_end/views/components/layout.art" />
+        <option value="$PROJECT_DIR$/blog_end/views/article.art" />
+        <option value="$PROJECT_DIR$/blog_end/public/javascripts/article.js" />
+        <option value="$PROJECT_DIR$/blog_end/controller/article.js" />
+        <option value="$PROJECT_DIR$/blog/src/config.js" />
+        <option value="$PROJECT_DIR$/blog/src/pages/index.vue" />
         <option value="$PROJECT_DIR$/blog_end/routes/router.js" />
         <option value="$PROJECT_DIR$/blog_end/app.js" />
-        <option value="$PROJECT_DIR$/blog_end/controller/uploadImg.js" />
+        <option value="$PROJECT_DIR$/blog_end/views/articleList.art" />
+        <option value="$PROJECT_DIR$/blog_end/views/login.art" />
+        <option value="$PROJECT_DIR$/blog_end/views/register.art" />
       </list>
     </option>
   </component>
@@ -157,8 +367,8 @@
     <handled-path value="$PROJECT_DIR$/myVuePro/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="92" />
+    <option name="x" value="124" />
+    <option name="y" value="148" />
     <option name="width" value="1757" />
     <option name="height" value="988" />
   </component>
@@ -206,6 +416,100 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-blog-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -235,11 +539,11 @@
       <recent name="F:\myprogram\vue-blog-system\blog_end" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\myprogram\vue-blog-system\blog_end\public\lib" />
       <recent name="F:\myprogram\vue-blog-system\blog_end\public\javascripts" />
       <recent name="F:\myprogram\vue-blog-system\blog_end\routes" />
       <recent name="F:\myprogram\vue-blog-system\blog\static\style" />
       <recent name="F:\myprogram\vue-blog-system\blog\static" />
-      <recent name="F:\myprogram\vue-blog-system\blog_end\public\simplemde" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -354,12 +658,12 @@
       <workItem from="1495850620108" duration="21779000" />
       <workItem from="1496211343535" duration="6337000" />
       <workItem from="1496280182289" duration="13296000" />
-      <workItem from="1496368795894" duration="8144000" />
+      <workItem from="1496368795894" duration="13675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185557000" />
+    <option name="totallyTimeSpent" value="191088000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +675,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="92" width="1757" height="988" extended-state="0" />
+    <frame x="124" y="148" width="1757" height="988" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19080861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -409,31 +713,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/style/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8717">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/assets/less/global.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -441,6 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
           <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -448,6 +733,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -476,20 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3402">
           <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/src/pages/blog.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/src/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -537,6 +809,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -544,6 +817,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -551,6 +825,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -558,20 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/views/components/layout.art">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/views/article.art">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -579,6 +841,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,14 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="17" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -617,22 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/views/register.art">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/views/login.art">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="46" column="19" lean-forward="false" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -693,22 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/public/javascripts/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_end/controller/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog_end/controller/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-84">
@@ -757,18 +980,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/public/lib/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1449">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/views/components/layout.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/src/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="56" column="48" lean-forward="false" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/src/pages/blog.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="46" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/controller/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="100" column="15" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="15" />
+          <folding>
+            <marker date="1496392963750" expanded="true" signature="2551:3239" ph="{...}" />
+            <marker date="1496392963750" expanded="true" signature="2637:3161" ph="{...}" />
+            <marker date="1496392963750" expanded="true" signature="2745:3154" ph="{...}" />
+            <marker date="1496392963750" expanded="true" signature="3167:3237" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/views/article.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/public/javascripts/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog_end/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog_end/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="496">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/views/articleList.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="98" column="35" lean-forward="false" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/views/login.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_end/views/register.art">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding />
         </state>
       </provider>

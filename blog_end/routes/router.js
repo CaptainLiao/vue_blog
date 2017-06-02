@@ -23,10 +23,14 @@ module.exports = function(app) {
     // 文章
     app.get('/article', Article.someMiddleware, Article.edit);
     app.get('/article/list', Article.list);
-    app.get('/article/archive', Article.archive);
 
     app.post('/api/article/new', Article.create);
     app.post('/api/article/del', Article.del);
-    app.post('/api/uploadImg', upload.single('file'), UploadImg.uploadImg)
+    app.post('/api/uploadImg', upload.single('file'), UploadImg.uploadImg);
+
+    // VUE前端用的接口
+    app.get('/api/article', Article.someMiddleware, Article.apiDetail);
+    app.get('/api/article/archive', Article.archive);
+    app.get('/api/article/list', Article.apiList);
 
 };

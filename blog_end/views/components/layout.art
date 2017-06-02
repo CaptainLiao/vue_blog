@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{block 'title'}}我的网站{{/block}}</title>
-    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/lib/layui/css/layui.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     {{block 'head'}}
     <link rel="stylesheet" href="./main.css">
@@ -65,7 +65,7 @@
 <%})%>
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="/layui/layui.js"></script>
+<script src="/lib/layui/layui.js"></script>
 <script>
     layui.use('element', function(){
         let element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块

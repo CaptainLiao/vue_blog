@@ -5,9 +5,7 @@
 <%})%>
 
 <% block('head', function() {%>
-<link rel="stylesheet" href="/simplemde/simplemde.min.css"></link>
 <link rel="stylesheet" href="/stylesheets/article.css">
-
 <%})%>
 
 <% block('content', function() {%>
