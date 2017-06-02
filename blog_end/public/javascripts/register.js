@@ -10,10 +10,10 @@ $(function() {
             pwd,
             confirmPwd
         };
-        let url = '/user/register';
+        let url = '/api/register';
         let id = $(this).attr('id');
         if(id === 'editPwd') {
-            url = '/user/edit'
+            url = '/api/edit'
         }
         $.ajax({
             url,

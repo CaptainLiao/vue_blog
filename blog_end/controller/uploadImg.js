@@ -1,15 +1,12 @@
-let express = require('express');
-let router = express.Router();
-let multer = require("multer");
-let target = './public/images';
-let upload = multer({dest: target});
+
 let fs = require('fs');
 let qiniuUpload = require('../public/javascripts/qiniuUpload');
 
 /**
  * 图片上传接口
  */
-router.post('/',upload.single('file'), function(req, res, next) {
+
+exports.uploadImg = (req, res) => {
     console.log('file: ',req.file);
     let file = req.file;
     let oldFile = file.path;
@@ -32,6 +29,5 @@ router.post('/',upload.single('file'), function(req, res, next) {
         };
         res.send(JSON.stringify(_result));
     });
-});
+};
 
-module.exports = router;

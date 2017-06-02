@@ -50,16 +50,21 @@ app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,params");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+
     next();
 });
 
 let index = require('./routes/index');
 let user = require('./routes/user');
 
-app.use('/', index);
-app.use('/article', require('./routes/article'));
-app.use('/uploadImg', require('./routes/uploadImg'));
-app.use('/user', user);
+// app.use('/', index);
+// app.use('/article', require('./routes/article'));
+// app.use('/uploadImg', require('./routes/uploadImg'));
+// app.use('/user', user);
+
+let routes = require('./routes/router');
+routes(app);
+
 
 
 // catch 404 and forward to error handler

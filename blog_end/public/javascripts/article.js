@@ -11,7 +11,7 @@
             form = new FormData($('#uploadForm')[0]);
             console.log(form);
             $.ajax({
-                url: '/uploadImg',
+                url: '/api/uploadImg',
                 method: 'POST',
                 dataType: 'json',
                 data: form,
@@ -57,7 +57,7 @@
         var type = $('.operate-btn').find('.layui-btn-warm').text();
         var id = $(this).data('id');
         $.ajax({
-            url: '/article/new',
+            url: '/api/article/new',
             method: 'POST',
             dataType: 'json',
             data: {

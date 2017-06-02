@@ -1,16 +1,15 @@
-let express = require('express');
-let router = express.Router();
+
 let Article = require('../models/article');
 let marked = require('marked');
-let moment = require('moment');
+
 
 // middleware
-let someMiddleware = (req, res, next) => {
+exports.someMiddleware = (req, res, next) => {
     console.log(11111);
     next();
 };
 
-let edit = (req, res, next) => {
+exports.edit = (req, res, next) => {
     console.log(req.query.id);
     let query = req.query;
     if(query && query.id) {
@@ -38,7 +37,7 @@ let edit = (req, res, next) => {
 
 };
 
-let list = (req, res, next) => {
+exports.list = (req, res, next) => {
     Article.fetch((err, data) => {
         if(err) throw new Error(err);
 
@@ -52,7 +51,7 @@ let list = (req, res, next) => {
     })
 };
 
-let create = (req, res, next) => {
+exports.create = (req, res, next) => {
     let articleObj = req.body;
     let id = articleObj.id;
     let newArticle = {};
@@ -84,7 +83,7 @@ let create = (req, res, next) => {
 
 };
 
-let del = (req, res, next) => {
+exports.del = (req, res, next) => {
     let id = req.body.id.replace(/\"/g, '');
 
     Article.delById(id, (err, article) => {
@@ -97,7 +96,7 @@ let del = (req, res, next) => {
 
 };
 
-let archive = (req, res, next) => {
+exports.archive = (req, res, next) => {
     Article.fetch((err, data) => {
         if(err) {
             res.send({ err});
@@ -115,22 +114,4 @@ let archive = (req, res, next) => {
     })
 };
 
-// 文章编辑主页
-router.get('/', someMiddleware, edit);
 
-// 文章所有列表
-router.get('/list', list);
-
-// 文章标题列表
-router.get('/archive', archive);
-
-
-// 文章新增
-router.post('/new', create);
-
-// 删除文章
-router.post('/del', del);
-
-
-
-module.exports = router;
