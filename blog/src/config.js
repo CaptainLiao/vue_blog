@@ -1,4 +1,5 @@
 let host = 'http://localhost:5000';
+host = 'http://admin.fayinme.cn';
 
 let config = {
   API: {

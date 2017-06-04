@@ -25,16 +25,16 @@
             </dl>
         </li>
         <li class="layui-nav-item"><a href="">大数据</a></li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">解决方案</a>
+<!--         <li class="layui-nav-item">
+            <a href="javascript:;">个人中心</a>
             <dl class="layui-nav-child">
                 <dd><a href="">移动模块</a></dd>
                 <dd><a href="">后台模版</a></dd>
                 <dd class="layui-this"><a href="">选中项</a></dd>
-                <dd><a href="">电商平台</a></dd>
+                <dd><a href="">退出登录</a></dd>
             </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">社区</a></li>
+        </li> -->
+        <li class="layui-nav-item blog-logout">退出登录</li>
     </ul>
 </header>
 <nav class="sidebar">
@@ -67,6 +67,21 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="/lib/layui/layui.js"></script>
 <script>
+    $('.blog-logout').click(function () {
+        $.ajax({
+            url: '/api/logout',
+            method: 'POST',
+            dataType: 'json',
+            data: {},
+            success: function (res) {
+                location.href = '/user/login'
+                
+            },
+            error: function (err) {
+                
+            }
+        })
+    })
     layui.use('element', function(){
         let element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
 

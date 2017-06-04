@@ -3,7 +3,11 @@ let User = require('../models/user');
 exports.showLogin = (req, res) => {
     res.render('login.art', { title: '廖大爷s' });
 };
-
+exports.logout = (req, res) => {
+    delete req.session.user;
+    //res.redirect('/user/register');
+    res.send({code: 0, msg: 'success', data: req.session});
+}
 exports.login = (req, res) => {
 
     let body = req.body;
@@ -32,7 +36,8 @@ exports.login = (req, res) => {
                 if(err) console.log(err);
 
                 if(isMatched) {
-                    res.send({code: 0, msg: 'success', data: 'ok'});
+                    req.session.user = user;
+                    res.send({code: 0, msg: 'success', data: req.session});
                 }else {
                     res.send({code: -1, msg: '用户名和密码不匹配', data: ''});
                 }
@@ -106,4 +111,14 @@ exports.editPassword = (req, res) => {
             .catch(err => {
                 res.send({code: -1,msg: 'error',err})
             });
+};
+
+exports.loginRequired = (req, res, next) => {
+    let user = req.session.user;
+
+    if(!user) {
+        return res.redirect('/user/login');
+    }
+
+    next();
 };

@@ -19,14 +19,15 @@ module.exports = function(app) {
     app.post('/api/login', User.login);
     app.post('/api/register', User.register);
     app.post('/api/edit', User.editPassword);
+    app.post('/api/logout', User.logout);
 
     // 文章
-    app.get('/article', Article.someMiddleware, Article.edit);
-    app.get('/article/list', Article.list);
+    app.get('/article', User.loginRequired, Article.edit);
+    app.get('/article/list', User.loginRequired, Article.list);
 
-    app.post('/api/article/new', Article.create);
-    app.post('/api/article/del', Article.del);
-    app.post('/api/uploadImg', upload.single('file'), UploadImg.uploadImg);
+    app.post('/api/article/new', User.loginRequired, Article.create);
+    app.post('/api/article/del', User.loginRequired, Article.del);
+    app.post('/api/uploadImg', User.loginRequired, upload.single('file'), UploadImg.uploadImg);
 
     // VUE前端用的接口
     app.get('/api/article', Article.someMiddleware, Article.apiDetail);

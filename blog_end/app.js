@@ -6,7 +6,8 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let artTemplate = require('express-art-template');
 let template = require('art-template');
-let multer = require('multer');
+let session = require('express-session');
+let MongoStore = require('connect-mongo')(session);
 
 let env = process.env.NODE_ENV || 'development';
 
@@ -34,7 +35,13 @@ app.set('view options', {
 });
 app.set('views', path.join(__dirname, 'views'));
 
-
+// session本地持久化处理
+app.use(session({
+  secret: 'blog',
+  store: new MongoStore({
+    url: DB_URL
+  })
+}))
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

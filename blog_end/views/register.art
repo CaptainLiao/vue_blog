@@ -52,6 +52,7 @@
     <a href="/user/login" class="a-small fr">已有账号，立即登录</a>
 </section>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
 <script src="/javascripts/register.js"></script>
 
 </body>
