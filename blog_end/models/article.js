@@ -49,6 +49,7 @@ ArticleSchema.statics = {
             })
         })
     },
+
     delById(id, cb) {
         return this.remove({_id: id})
                 .exec(cb);
@@ -67,6 +68,7 @@ ArticleSchema.statics = {
                             }
                         })
                     })
+                    .catch(err => reject(err))
         });
 
     }

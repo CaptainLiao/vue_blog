@@ -7,8 +7,8 @@ exports.logout = (req, res) => {
     delete req.session.user;
     //res.redirect('/user/register');
     res.send({code: 0, msg: 'success', data: req.session});
-}
-exports.login = (req, res) => {
+};
+exports.login = (req, res, next) => {
 
     let body = req.body;
     let name = body.name;
@@ -27,19 +27,20 @@ exports.login = (req, res) => {
     }
 
     User.findOne({name:name}, (err, user) => {
-        if(err) console.log(err);
+        if(err) next(err);
 
         if(!user) {
             res.send({code: -1, msg: '没有找到用户名', data: ''});
         } else {
             user.comparePassword(pwd, (err, isMatched) => {
-                if(err) console.log(err);
+                if(err) next(err);
 
                 if(isMatched) {
                     req.session.user = user;
                     res.send({code: 0, msg: 'success', data: req.session});
                 }else {
-                    res.send({code: -1, msg: '用户名和密码不匹配', data: ''});
+                    res.status(200).send({code: -1, msg: '用户名和密码不匹配', data: ''});
+
                 }
             })
         }

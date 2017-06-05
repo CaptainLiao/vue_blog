@@ -6,7 +6,7 @@ let qiniuUpload = require('../public/javascripts/qiniuUpload');
  * 图片上传接口
  */
 
-exports.uploadImg = (req, res) => {
+exports.uploadImg = (req, res, next) => {
     console.log('file: ',req.file);
     let file = req.file;
     let oldFile = file.path;
@@ -16,7 +16,7 @@ exports.uploadImg = (req, res) => {
 
     qiniuUpload.qiniuUpload([newPath]).then(result => {
         fs.unlink(newPath, (err)=> {
-            console.log(err);
+            next(err);
         });
         let host = 'http://opz2g8x56.bkt.clouddn.com/';
         let _result = {

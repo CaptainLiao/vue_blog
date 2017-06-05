@@ -83,7 +83,7 @@
                 layui.use('layer', function(){
                     var layer = layui.layer;
 
-                    layer.msg(res.responseJSON.msg);
+                    layer.msg(res.responseJSON.msg || res.responseJSON.err.message);
 
                 });
             }
