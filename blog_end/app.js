@@ -38,6 +38,8 @@ app.set('views', path.join(__dirname, 'views'));
 // session本地持久化处理
 app.use(session({
   secret: 'blog',
+    resave: true,
+    saveUninitialized: false,
   store: new MongoStore({
     url: DB_URL
   })

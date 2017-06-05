@@ -27,9 +27,10 @@ exports.edit = (req, res, next) => {
 
 exports.list = (req, res, next) => {
     Article.fetch((err, data) => {
-        if(err) throw new Error(err);
+        if(err) next(err);
 
         res.render('articleList.art', { title: '文章列表', articles: data } );
+
 
     })
 };

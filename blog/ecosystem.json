@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "Blogfront",
-            "script": "./build/dev-server.js",
+            "script": "",
             "env": {
                 "COMMON_VARIABLE": "true"
             },
