@@ -11,11 +11,12 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-const Index = resolve => require(['@/pages/index'], resolve)
-const Blog = resolve => require(['@/pages/blog'], resolve)
-const Project = resolve => require(['@/pages/project'], resolve)
-const About = resolve => require(['@/pages/list'], resolve)
-const List = resolve => require(['@/pages/list'], resolve)
+const Index = resolve => System.import('../pages/index.vue');
+const Blog = resolve => System.import('../pages/blog.vue');
+const Project = resolve => System.import('../pages/project.vue');
+const About = resolve => System.import('../pages/list.vue');
+const List = resolve => System.import('../pages/list.vue');
+
 
 let index = {
   path: '/',
