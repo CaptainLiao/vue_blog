@@ -4,7 +4,7 @@
 
     <section class="fay-section">
       <h1>THE NEWEST BLOG</h1>
-      <h2>Essential Links</h2>
+      <h2>Keep thinking</h2>
       <el-row type="flex" class="row-bg" justify="center">
 
         <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item no-border fl" v-for="item in articles" :key="item">
@@ -17,8 +17,8 @@
     </section>
 
     <section class="fay-section">
-      <h1>THE NEWEST BLOG</h1>
-      <h2>Essential Links</h2>
+      <h1>THE LATEST PROJECT</h1>
+      <h2>Keep practicing</h2>
       <el-row type="flex" class="row-bg" justify="center">
         <el-col :xs="24" :sm="8" :md="8" :lg="8" class="fay-section-item no-border fl">
           <h3>推荐</h3>
@@ -73,12 +73,22 @@
 
 <style lang="less" scoped>
   @import "../assets/less/global.less";
-
+  .fay-section {
+    padding: 40px 60px;
+  }
   .fay-section-item {
     border-left: 1px solid #EFF2F7;
     margin-top: 40px;
     padding: 10px 20px 0 20px;
     text-align: left;
+    h1 {
+      color: #999;
+    }
+    h3 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
   .no-border {
     border: 0;
@@ -94,6 +104,7 @@
     h1,h2,h3 {
       font-weight: normal;
     }
+
     h3 {
       cursor: pointer;
       color: @title-color;

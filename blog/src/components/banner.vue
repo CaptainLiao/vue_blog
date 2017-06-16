@@ -1,7 +1,7 @@
 <template>
   <div class="fay-banner">
     <el-row type="flex" justify="center" class="banner-list">
-      <el-col :span="24"><a href="#"><img src="../assets/saidbg.png" alt=""></a></el-col>
+      <el-col :span="24"><a href="#"><img src="http://opz2g8x56.bkt.clouddn.com/saidbg.144c574.png" alt=""></a></el-col>
     </el-row>
   </div>
 </template>

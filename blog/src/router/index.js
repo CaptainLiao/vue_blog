@@ -2,20 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // 视图页面
-// import Index from '@/pages/index'
-// import Blog from '@/pages/blog'
-// import Project from '@/pages/project'
-// import About from '@/pages/about'
-// import List from '@/pages/list'
+import Index from '@/pages/index'
+import Blog from '@/pages/blog'
+import Project from '@/pages/project'
+import About from '@/pages/about'
+import List from '@/pages/list'
 
 
 Vue.use(Router);
 
-const Index = resolve => System.import('../pages/index.vue');
-const Blog = resolve => System.import('../pages/blog.vue');
-const Project = resolve => System.import('../pages/project.vue');
-const About = resolve => System.import('../pages/list.vue');
-const List = resolve => System.import('../pages/list.vue');
+// const Index = resolve => System.import('../pages/index.vue');
+// const Blog = resolve => System.import('../pages/blog.vue');
+// const Project = resolve => System.import('../pages/project.vue');
+// const About = resolve => System.import('../pages/about.vue');
+// const List = resolve => System.import('../pages/list.vue');
 
 
 let index = {
