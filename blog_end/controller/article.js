@@ -29,11 +29,11 @@ exports.list = (req, res, next) => {
     let id = +req.query.page;
 
     Article.count({}, (err, count) => {
-       Article.fetch(-- id, (err, data) => {
+       Article.fetch((err, data) => {
         if(err) next(err);
         
         res.render('articleList.art', { title: '文章列表', articles: data, count } );
-        }) 
+        }, --id) 
     })
     
 };
