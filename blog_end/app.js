@@ -63,8 +63,8 @@ app.all('*', function(req, res, next) {
     next();
 });
 
-let index = require('./routes/index');
-let user = require('./routes/user');
+// let index = require('./routes/index');
+// let user = require('./routes/user');
 
 // app.use('/', index);
 // app.use('/article', require('./routes/article'));

@@ -36,3 +36,10 @@
   box-sizing: border-box;
   padding: 60px 0 0 200px;
 }
+.hide {
+  display: none;
+}
+
+#pagation {
+  float: right
+}

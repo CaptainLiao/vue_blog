@@ -15,26 +15,8 @@
 <body>
 <header>
     <ul class="layui-nav">
-        <li class="layui-nav-item"><a href="">最新活动</a></li>
-        <li class="layui-nav-item layui-this">
-            <a href="javascript:;">产品</a>
-            <dl class="layui-nav-child">
-                <dd><a href="">选项1</a></dd>
-                <dd><a href="">选项2</a></dd>
-                <dd><a href="">选项3</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">大数据</a></li>
-<!--         <li class="layui-nav-item">
-            <a href="javascript:;">个人中心</a>
-            <dl class="layui-nav-child">
-                <dd><a href="">移动模块</a></dd>
-                <dd><a href="">后台模版</a></dd>
-                <dd class="layui-this"><a href="">选中项</a></dd>
-                <dd><a href="">退出登录</a></dd>
-            </dl>
-        </li> -->
-        <li class="layui-nav-item blog-logout">退出登录</li>
+        <li class="layui-nav-item"><a href="/">首页</a></li>
+        <li class="layui-nav-item blog-logout fr"><a href="javascript:;">退出登录</a></li>
     </ul>
 </header>
 <nav class="sidebar">
@@ -44,19 +26,18 @@
             <dl class="layui-nav-child">
                 <dd><a href="/article">文章创建</a></dd>
                 <dd><a href="/article/list">文章列表</a></dd>
-                <dd><a href="">跳转项</a></dd>
+                <dd><a href="">标签管理</a></dd>
             </dl>
         </li>
-        <li class="layui-nav-item">
+<!--         <li class="layui-nav-item">
             <a href="javascript:;">系统管理</a>
             <dl class="layui-nav-child">
                 <dd><a href="">菜单管理</a></dd>
                 <dd><a href="">角色管理</a></dd>
                 <dd><a href="">用户管理</a></dd>
             </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">云市场</a></li>
-        <li class="layui-nav-item"><a href="">社区</a></li>
+        </li> -->
+        <li class="layui-nav-item"><a href="www.fayinme.cn" target="_blank">博客</a></li>
     </ul>
 </nav>
 <div class="main">

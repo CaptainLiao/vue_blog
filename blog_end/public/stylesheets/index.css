@@ -12,3 +12,6 @@ table td {
 .layui-layedit {
   width: 80%;
 }
+.table-operation-box {
+  min-width: 140px;
+}

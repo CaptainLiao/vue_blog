@@ -10,12 +10,13 @@
 <%})%>
 
 <% block('content', function() {%>
-
+<div class="hide" id="blog-count"><%= count%></div>
 <div class="wrapper">
+
     <table class="layui-table">
         <thead>
         <tr>
-            <th>作者</th>
+            <th style="min-width: 28px;">作者</th>
             <th>标题</th>
             <th>创建时间</th>
             <th>最近更新</th>
@@ -58,6 +59,7 @@
 <%})%>
 
 <% block('scripts', function() {%>
+
 <script>
     $(function() {
         $('.layui-table').on('click', 'button', function() {
@@ -122,36 +124,22 @@
 
 </script>
 <script>
+    var count = $('#blog-count').text();
+    let showPage = 5;
     layui.use(['laypage', 'layer'], function() {
         let laypage = layui.laypage
                 , layer = layui.layer;
 
         laypage({
-            cont: 'pagation'
-            , pages: 100 //总页数
-            , groups: 5 //连续显示分页数
-        });
-        //测试数据
-
-        let nums = 5; //每页出现的数据量
-
-        //模拟渲染
-        let render = function(data, curr){
-            let arr = [],
-                    thisData = data.concat().splice(curr*nums-nums, nums);
-
-            layui.each(thisData, function(index, item){
-                arr.push('<li>'+ item +'</li>');
-            });
-            return arr.join('');
-        };
-
-        //调用分页
-        laypage({
-            cont: 'pagation'
-            ,pages: Math.ceil(data.length/nums) //得到总页数
-            ,jump: function(obj){
-                document.getElementById('show').innerHTML = render(data, obj.curr);
+            cont: 'pagation',
+            pages: Math.ceil(count / showPage), //总页数
+            groups: 5, //连续显示分页数
+            jump: function(obj, first) {
+                console.log(first)
+                var page = obj.curr;
+                if(!first) {
+                    location.href = '/article/list?page=' + page;
+                }
             }
         });
     });

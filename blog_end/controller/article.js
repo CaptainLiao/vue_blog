@@ -26,13 +26,16 @@ exports.edit = (req, res, next) => {
 };
 
 exports.list = (req, res, next) => {
-    Article.fetch((err, data) => {
+    let id = +req.query.page;
+
+    Article.count({}, (err, count) => {
+       Article.fetch(-- id, (err, data) => {
         if(err) next(err);
-
-        res.render('articleList.art', { title: '文章列表', articles: data } );
-
-
+        
+        res.render('articleList.art', { title: '文章列表', articles: data, count } );
+        }) 
     })
+    
 };
 
 exports.create = (req, res, next) => {
