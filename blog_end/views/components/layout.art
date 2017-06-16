@@ -37,7 +37,7 @@
                 <dd><a href="">用户管理</a></dd>
             </dl>
         </li> -->
-        <li class="layui-nav-item"><a href="www.fayinme.cn" target="_blank">博客</a></li>
+        <li class="layui-nav-item"><a href="http://www.fayinme.cn" target="_blank">博客</a></li>
     </ul>
 </nav>
 <div class="main">

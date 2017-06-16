@@ -51,17 +51,43 @@
 
         </tbody>
     </table>
-    <div id="pagation"></div>
-    <div id="show"></div>
-</div>
 
+    <ul id="pagination-list" class="pagination-list clearfix2 fr">
+        <li class="paga-up fl"><button>上一页</button></li>
+        <li class="page-down fl"><button>下一页</button></li>
+    </ul>
+</div>
 
 <%})%>
 
 <% block('scripts', function() {%>
-
 <script>
     $(function() {
+        // 分页
+        var count = $("#blog-count").text();
+        var p = Math.ceil(count / 5);
+        $('#pagination-list').on('click', 'li', function() {
+            var $this = $(this);
+            var $thisClass = $this.attr('class').split(' ')[0];
+            var page = location.href.split('=')[1];
+            page = page ? page : 1
+           
+            switch ($thisClass) {
+                case 'paga-up':
+                    --page
+                    break;
+                
+                default:
+                    ++page;
+                    break;
+
+            }
+            console.log(page)
+            if(page <= 0) return;
+            if(page > p) return;
+            location.href = '/article/list?page=' + page;         
+        })
+
         $('.layui-table').on('click', 'button', function() {
             var $this = $(this);
             var $thisClasses = $this.attr('class').split(' ');
@@ -122,27 +148,6 @@
         })
     })
 
-</script>
-<script>
-    var count = $('#blog-count').text();
-    let showPage = 5;
-    layui.use(['laypage', 'layer'], function() {
-        let laypage = layui.laypage
-                , layer = layui.layer;
-
-        laypage({
-            cont: 'pagation',
-            pages: Math.ceil(count / showPage), //总页数
-            groups: 5, //连续显示分页数
-            jump: function(obj, first) {
-                console.log(first)
-                var page = obj.curr;
-                if(!first) {
-                    location.href = '/article/list?page=' + page;
-                }
-            }
-        });
-    });
 </script>
 
 <%})%>

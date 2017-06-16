@@ -43,3 +43,6 @@
 #pagation {
   float: right
 }
+.layui-nav {
+  border-radius: 0;
+}
