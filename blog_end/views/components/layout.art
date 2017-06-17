@@ -26,7 +26,7 @@
             <dl class="layui-nav-child">
                 <dd><a href="/article">文章创建</a></dd>
                 <dd><a href="/article/list">文章列表</a></dd>
-                <dd><a href="">标签管理</a></dd>
+                <dd><a href="/tag">标签管理</a></dd>
             </dl>
         </li>
 <!--         <li class="layui-nav-item">

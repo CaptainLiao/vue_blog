@@ -2,6 +2,7 @@ let User = require('./../controller/user');
 let Index = require('./../controller/index');
 let Article = require('./../controller/article');
 let UploadImg = require('./../controller/uploadImg');
+let Tags = require('./../controller/tags');
 
 let multer = require("multer");
 let target = './public/images';
@@ -28,6 +29,11 @@ module.exports = function(app) {
     app.post('/api/article/new', User.loginRequired, Article.create);
     app.post('/api/article/del', User.loginRequired, Article.del);
     app.post('/api/uploadImg', User.loginRequired, upload.single('file'), UploadImg.uploadImg);
+
+    // 标签管理
+    app.get('/tag', User.loginRequired, Tags.list)
+    app.post('/api/tag', User.loginRequired, Tags.create)
+    app.post('/api/tag/del', User.loginRequired, Tags.del)
 
     // VUE前端用的接口
     app.get('/api/article', Article.someMiddleware, Article.apiDetail);

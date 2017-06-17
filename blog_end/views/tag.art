@@ -1,0 +1,97 @@
+<% extend('./components/layout.art')%>
+
+<% block('title', function() {%>
+    {{title}}
+<%})%>
+
+<% block('head', function() {%>
+<link rel="stylesheet" href="/stylesheets/article.css">
+<%})%>
+
+<% block('content', function() {%>
+
+<div class="article">
+    <div class="tags-list">
+        <% data && data.forEach(item => {%>
+            <button class="layui-btn layui-btn-primary" data-id="<%= item._id%>"><%= item.tag%></button>
+        <%})%>
+    </div>
+
+    <form class="layui-form" style="margin-top: 60px;" enctype="application/x-www-form-urlencoded">
+      <div class="layui-form-item">
+        <div class="layui-inline">
+              <label class="layui-form-label" style="text-align: left;padding: 9px 15px 9px 0;">新建标签</label>
+              <div class="layui-input-inline">
+                <input type="text" name="tag" lay-verify="tag" autocomplete="off" class="layui-input">
+              </div>
+              <button class="layui-btn" id="confirmBtn" type="button">确认</button>
+        </div>
+      </div>
+
+    </form>  
+</div>
+<%})%>
+
+
+<% block('scripts', function() {%>
+    <script src="/lib/layui/layui.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // 创建新标签
+            $("#confirmBtn").on('click', function() {
+                var val = $('.layui-input').val();
+                if(!val) return;
+                $.ajax({
+                    url: '/api/tag',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {tag: val},
+                    success: function (data) {
+                        if(data.code === 0) {
+                            location.reload();
+                        }
+                        console.log(data)
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                })
+            });
+
+            // 删除标签
+            $('.tags-list').on('click', 'button', function() {
+                var id = $(this).data('id')
+                console.log(id)
+                layui.use('layer', function(){
+                  var layer = layui.layer;
+
+                    layer.open({
+                        title: '提示',
+                        content: '宝贝儿，你真的忍心删掉我么？'
+                    }); 
+                    $('.layui-layer-btn0').click(function () {
+
+                        $.ajax({
+                            url: '/api/tag/del',
+                            method: 'POST',
+                            dataType: 'json',
+                            data: {
+                                id: id
+                            },
+                            success: function(res) {
+                                console.log(res);
+                                if(res.code === 0) {
+                                    location.reload();
+                                }
+                            },
+                            error: function (err) {
+                                console.log(err)
+                            }
+                        })
+                    })
+                }); 
+
+            })
+        })
+    </script>
+<%})%>

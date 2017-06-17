@@ -61,6 +61,7 @@
 <%})%>
 
 <% block('scripts', function() {%>
+<script src="/lib/layui/layui.js"></script>
 <script>
     $(function() {
         // 分页
@@ -117,30 +118,34 @@
                     location.href = '/article?id=' + id;
                     break;
                 case 'edit-del':
-                    layer.open({
-                        title: 'FBI WARNING'
-                        ,content: '宝贝儿，你真的忍心删掉我么？'
-                    });
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.open({
+                            title: 'FBI WARNING',
+                            content: '宝贝儿，你真的忍心删掉我么？'
+                        });
                     $('.layui-layer-btn0').click(function () {
 
                         $.ajax({
-                            url: '/api/article/del',
-                            method: 'POST',
-                            dataType: 'json',
-                            data: {
-                                id: id
-                            },
-                            success: function(res) {
-                                console.log(res);
-                                if(res.code === 0) {
-                                    $this.parents('tr').remove();
-                                }
-                            },
-                            error: function (err) {
-                                console.log(err)
-                            }
-                        })
-                    })
+                          url: '/api/article/del',
+                          method: 'POST',
+                          dataType: 'json',
+                          data: {
+                              id: id
+                          },
+                          success: function(res) {
+                              console.log(res);
+                              if(res.code === 0) {
+                                  $this.parents('tr').remove();
+                              }
+                          },
+                          error: function (err) {
+                              console.log(err)
+                          }
+                      })
+                  })
+                })  
+                   
 
                     break;
             }

@@ -19,9 +19,10 @@
     <input type="text" name="title" placeholder="请输入标题" value="<%= article.title%>" autocomplete="off" class="layui-input article-title">
     <h2>标签：</h2>
     <div class="operate-btn">
-        <button class="layui-btn layui-btn-small <%= (article.type=='JAVASCRIPT' ? 'layui-btn-warm' : '')%>">JAVASCRIPT</button>
-        <button class="layui-btn layui-btn-small <%= (article.type=='CSS' ? 'layui-btn-warm' : '')%>">CSS</button>
-        <button class="layui-btn layui-btn-small <%= (article.type=='HTML' ? 'layui-btn-warm' : '')%>">HTML</button>
+        <% tags && tags.forEach(item => {%>
+            <button class="layui-btn layui-btn-small <%= (article.type== item.tag ? 'layui-btn-warm' : '')%>"><%= item.tag%></button>
+        <%})%>
+
     </div>
 
     <h2>内容：</h2>

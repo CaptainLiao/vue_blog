@@ -1,5 +1,6 @@
 
 let Article = require('../models/article');
+let Tags = require('../models/tags');
 let marked = require('marked');
 
 
@@ -17,10 +18,19 @@ exports.edit = (req, res, next) => {
 
         Article.findById(id)
                 .then(data => {
-                    res.render('article.art', { title: '修改文章', article: data })
+                    Tags.fetch((err, tags) => {
+                        if (err) next(err);
+
+                        res.render('article.art', { title: '修改文章', article: data, tags });
+                    })
                 })
     } else {
-        res.render('article.art', { title: '新建文章', article: {} });
+        Tags.fetch((err, data) => {
+            if (err) next(err);
+
+            res.render('article.art', { title: '新建文章', article: {},tags: data });
+        })
+        
     }
 
 };
