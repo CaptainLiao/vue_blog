@@ -9,7 +9,8 @@
             <div class="b-year"><span class="by-txt">{{key}}</span></div>
             <article class="b-item" v-for="oitem in value">
               <div class="b-more">
-                <span>{{oitem.meta.createAt.substring(8, 10)}}日</span><small>{{oitem.meta.createAt.substring(11, 16)}}</small>
+                <span>{{oitem.meta.createAt.substring(8, 10)}}日</span><small>{{oitem.meta.createAt.substring(11, 13)>= 12?oitem.meta.createAt.substring(11, 13):+oitem.meta.createAt.substring(11, 13)+12}}:{{oitem.meta.createAt.substring(14, 16)}}</small>
+
               </div>
               <div class="b-main">
                 <a class="b-title"  v-bind:id="oitem._id" @click="jumpDetail(oitem._id)" title="点击查看文章">
