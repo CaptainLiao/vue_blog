@@ -11,17 +11,17 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-// const Index = r => require.ensuere([], () => r(require('../pages/index.vue')), 'Index')
-// const Blog = r => require.ensuere([], () => r(require('../pages/blog.vue')), 'Blog')
-// const Project = r => require.ensuere([], () => r(require('../pages/project.vue')), 'Project')
-// const About = r => require.ensuere([], () => r(require('../pages/about.vue')), 'About')
-// const List = r => require.ensuere([], () => r(require('../pages/list.vue')), 'List')
+const Index = r => require.ensure([], () => r(require('../pages/index.vue')), 'Index')
+const Blog = r => require.ensure([], () => r(require('../pages/blog.vue')), 'Blog')
+const Project = r => require.ensure([], () => r(require('../pages/project.vue')), 'Project')
+const About = r => require.ensure([], () => r(require('../pages/about.vue')), 'About')
+const List = r => require.ensure([], () => r(require('../pages/list.vue')), 'List')
 
-const Index = resolve => {require.ensure(['../pages/index.vue'], () => {resolve(require('../pages/index.vue'))})}
-const Blog = resolve => {require.ensure(['../pages/blog.vue'], () => {resolve(require('../pages/blog.vue'))})}
-const Project = resolve => {require.ensure(['../pages/project.vue'], () => {resolve(require('../pages/project.vue'))})}
-const About = resolve => {require.ensure(['../pages/about.vue'], () => {resolve(require('../pages/about.vue'))})}
-const List = resolve => {require.ensure(['../pages/list.vue'], () => {resolve(require('../pages/list.vue'))})}
+// const Index = resolve => {require.ensure(['../pages/index.vue'], () => {resolve(require('../pages/index.vue'))})}
+// const Blog = resolve => {require.ensure(['../pages/blog.vue'], () => {resolve(require('../pages/blog.vue'))})}
+// const Project = resolve => {require.ensure(['../pages/project.vue'], () => {resolve(require('../pages/project.vue'))})}
+// const About = resolve => {require.ensure(['../pages/about.vue'], () => {resolve(require('../pages/about.vue'))})}
+// const List = resolve => {require.ensure(['../pages/list.vue'], () => {resolve(require('../pages/list.vue'))})}
 
 
 let index = {
