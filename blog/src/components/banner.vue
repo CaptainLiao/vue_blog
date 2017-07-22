@@ -10,7 +10,7 @@
   @import "../assets/less/global.less";
   .fay-banner {
     width: 100%;
-    height: 700px;
+    height: 480px;
     overflow: hidden;
     a {
       width: 100%;

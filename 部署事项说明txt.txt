@@ -1,0 +1,294 @@
+// 切换到当前文件夹
+cd Program Files\mongodb\bin
+
+// 指定数据存放目录，并开始一个mongodb服务 
+./mongod.exe --dbpath "d:\program files\MongoDB\data" --storageEngine "mmapv1"
+
+// 新开一个cmd窗口，进入bin目录，输入
+./mongo   连接数据库（默认连接test数据库）
+
+
+启动出错
+Detected unclean shutdow n - d:\program files\MongoDB\data\mongod.lock is not empty.
+
+修复：
+./mongod.exe --repair --dbpath "d:\program files\MongoDB\data" --storageEngine "mmapv1"
+
+再次启动
+**只要操作mongodb数据库，服务就要一直开着**
+
+
+在开发过程中，每次修改代码保存后，我们都需要手动重启程序，才能查看改动的效果。使用 supervisor 可以解决这个繁琐的问题，全局安装 supervisor：
+
+npm install -g supervisor
+运行 supervisor --harmony index 启动程序
+
+// 阿里云ECS
+39.108.54.110:3999(公)
+172.18.194.96(私有)
+
+adduser:
+fayin
+lfy12345678
+
+
+## nginx 常用命令
+
+fdisk -l: 查看磁盘分区信息
+df -h: 查看硬盘使用区域
+ls -a: 查看文件列表
+
+sudo nginx -s reload: 重启conf文件
+
+sudo chmod 777 -R fileName : 修改文件权限
+sudo chmod 777 -R fileName : 修改文件权限
+
+## 第一次SSH登录 ECS 服务器：
+打开命令行终端（git），键入：
+````
+> ssh root@39.108.54.110
+> ssh -p 3999 fayin@-#39.108.54.110
+````
+输入实例密码，进入服务器环境。
+
+## vi 基本操作
+保存并退出：切换到英文输入法，1 按下esc；2 输入 : + wq! 3 按下enter
+
+## 配置 root 及应用账号权限
+
+### 新增管理员
+首先登录远端服务器，使用 aauser username 增加一个管理员，接着设置该管理员的登录密码
+> adduser fayin
+> *********
+
+1、 管理员权限
+// 将fayin 添加到 sudo 组里面
+> gpasswd -a fayin sudo
+> sudo visudo
+
+找到 #User privilege sepcification 这一行，键入 fayin ALL=(ALL:ALL) ALL，然后同时按下 ctrl + x键，再按下shift + y，保存。
+
+2、 登录新添加管理员账号
+新开一个 git 命令行，键入
+> fayin@39.108.54.110
+输入密码即可成功登录
+
+3、 配置本地无密码 SSH 登录
+新开命令行终端（git），键入：ls -a 当前文件夹下所有 .xxx 文件，进入 .ssh 文件夹
+
+3、1 开启ssh 代理
+> eval "$(ssh-agent -s)"
+回车后显示 Agent pid 2664，说明开启了代理
+
+切换到 .ssh文件夹下
+> ssh-add ~/.ssh/id_rsa　添加到本地
+
+3、2 在服务器上配置 ssh
+新开一个命令行，登录管理员账号，键入：
+>ssh-keygen -t rsa -b 4096 -C "15196004361@163.com"
+> eval "$(ssh-agent -s)"
+切换到　.ssh 文件夹下
+> ssh-add ~/.ssh/id_rsa
+
+3、3 在命令行中新建 authorized_keys 文件
+>vi authorized_keys
+按下 shift + :，输入 wq!
+
+3、4 在authorized_keys 文件中复制本地的 id_rsa.pub 内容
+> vi authorized_keys
+按下 i ，粘贴本地的 id_rsa.pub 内容，按下 esc，输入wq! 保存并退出。
+
+更改权限,重启服务
+> chmod 600 authorized_keys 
+> sudo service ssh restart 
+
+## 修改服务器默认登录端口
+> sudo vi /etc/ssh/sshd_config
+
+按下 i ，配置端口 Prot 39999 ，
+在PasswordAuthentication yes 下输入：
+>AllowUsers fayin
+
+按下 esc ，再按下 shift + :,输入 wq！保存并退出
+
+再次登录服务器：ssh -p 39999 fayin@yourip
+
+关闭root 登录
+PermitRootLogin no
+
+## 更新服务器系统盘
+
+> sudo apt-get update
+
+安装模块
+> sudo apt-get install vim openssl build-essential libssl-dev wget curl git
+
+通过nvm 安装 node.js
+1、安装nvm：github 搜索 nvm
+>wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+2、安装 node.js
+新开一个git ，键入 
+> nvm install v6.9.5
+
+3、制定系统默认版本
+> nvm use v6.9.5
+> nvm alias default v6.9.5
+
+4、淘宝镜像安装 npm
+> npm --registry=https://registry.npm.taobao.org install npm -g
+> echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+5、vi app.js
+在服务器上新建app.js，在浏览器地址栏输入http://39.108.54.110:3380 就可以访问啦。
+····
+const http = require('http')
+
+http.createServer((req, res) => {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('来自阿里云服务器的问候！')
+
+}).listen(3380)
+
+console.log('Server running on http://39.108.54.110:3380')
+
+····
+
+## 借助 pm2 让 Node.js 服务常驻
+> pm2 start app.js
+// pm2 上的服务列表
+> pm2 list
+// 某个应用的信息
+> pm2 show app
+
+### pm2 部署本地内容到服务器
+
+切换到本地项目工程目录，执行：
+
+pm2 deploy ecosystem.json production setup
+
+pm2 deploy ecosystem.json production 
+
+ecosystem.json
+
+````
+{
+    "apps": [
+        {
+            "name": "Blogfront",
+            "script": "./build/dev-server.js",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "fayin",
+            "host": ["39.108.54.110"],
+            "port": "3999",
+            "ref": "origin/master",
+            "repo": "https://github.com/CaptainLiao/blogfront.git",
+            "path": "/www/blogfront/production",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "post-deploy": "npm install && pm2 startOrRestart ecosystem.json --env production",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}
+
+````
+
+
+## 配置 Nginx 反向代理 Nodejs 端口
+1、删除并移除apache
+> update-rc.d -f apache2 remove
+> sudo apt-get remove apache2
+
+2、更新apt-get,安装 nginx
+> sudo apt-get update
+> sudo apt-get install nginx
+
+3、 配置nginx 反向代理
+> cd /etc/nginx
+> cd conf.d
+> sudo vi fayin-cn-3380.conf.d
+····
+upstream fayin {
+        server 127.0.0.1:3380;
+}
+
+server {
+        listen 80;
+        server_name 39.108.54.110/;
+        location / {
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forward-For $proxy_add_x_forwarded_for;
+                proxy_set_header Host $http_host;
+
+                proxy_set_header X-Nginx-Proxy true;
+
+                proxy_pass http://fayin;
+                proxy_redirect off;
+        }
+}
+
+····
+// 检查配置文件是否成功
+> sudo nginx -t 
+// 重启nginx
+> sudo nginx -s reload
+
+4、 隐藏server 
+> cd ..
+> sudo vi nginx.conf
+去掉 server_tokens off; 的注释。wq! 保存并退出
+> sudo service nginx reload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+req.query: 解析后的 url 中的 querystring，如 ?name=haha，req.query 的值为 {name: 'haha'}
+req.params: 解析 url 中的占位符，如 /:name，访问 /haha，req.params 的值为 {name: 'haha'}
+req.body: 解析后请求体，需使用相关的模块，如 body-parser，请求体为 {"name": "haha"}，则 req.body 为 {name: 'haha'}

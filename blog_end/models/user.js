@@ -11,11 +11,11 @@ let UserSchema = new Schema({
     meta: {
         createAt: {
             type: Date,
-            default: Date.now()
+            default: new Date()
         },
         updateAt: {
             type: Date,
-            default: Date.now()
+            default: new Date()
         }
     }
 });

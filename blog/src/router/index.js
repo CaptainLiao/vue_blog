@@ -58,6 +58,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 
 export default new Router({
   mode: 'history',
+  // sjsdf
   base: __dirname,
   scrollBehavior,
   routes: [index, blog, project, about, list]
